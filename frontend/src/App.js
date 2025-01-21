@@ -51,41 +51,35 @@ function App() {
               </header>
 
               <section className="services-overview">
-                <h2>Aperçu de nos services</h2>
-		  <div className="services-icons">
-
-    {/* Service 1: Nettoyage de bureaux */}
+  <h2>Aperçu de nos services</h2>
+  <div className="services-icons">
     <div className="service">
       <h3>Service 1</h3>
       <p>Nettoyage de bureaux</p>
       <video controls className="service-video">
-        <source src="/videos/nettoyage de bureaux.mp4" type="video/mp4" />
+        <source src={videoA} type="video/mp4" />
         Votre navigateur ne prend pas en charge les vidéos HTML5.
       </video>
     </div>
-
-    {/* Service 2: Entretien ménager */}
     <div className="service">
       <h3>Service 2</h3>
       <p>Entretien ménager</p>
       <video controls className="service-video">
-        <source src="/videos/entretien ménager.mp4" type="video/mp4" />
+        <source src={videoB} type="video/mp4" />
         Votre navigateur ne prend pas en charge les vidéos HTML5.
       </video>
     </div>
-
-    {/* Service 3: Nettoyage industriel */}
     <div className="service">
       <h3>Service 3</h3>
       <p>Nettoyage industriel</p>
       <video controls className="service-video">
-        <source src="/videos/nettoyage industriel.mp4" type="video/mp4" />
+        <source src={videoC} type="video/mp4" />
         Votre navigateur ne prend pas en charge les vidéos HTML5.
       </video>
     </div>
-
   </div>
 </section>
+
             </div>
           } />
 

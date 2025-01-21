@@ -208,6 +208,24 @@ body {
   margin: 5px;
 }
 
+/* Appliquer un style pour les vidéos dans la section services */
+.service-video {
+  max-width: 250px;       /* Limite la largeur à 100% de l'élément parent */
+  height: auto;          /* Conserve le ratio d'aspect de la vidéo */
+  border-radius: 8px;    /* Arrondir légèrement les coins */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ajouter une légère ombre pour donner un effet de profondeur */
+  margin-top: 10px;      /* Ajouter un petit espacement au-dessus de la vidéo */
+  margin-bottom: 10px;   /* Ajouter un espacement en bas */
+}
+
+/* Ajuster les vidéos pour les écrans plus petits */
+@media (max-width: 768px) {
+  .service-video {
+    max-width: 80%;       /* Sur les petits écrans, la vidéo prendra 80% de la largeur */
+    margin: 0 auto;       /* Centrer la vidéo horizontalement */
+  }
+}
+
 /* Footer */
 footer {
   background-color: #222;
