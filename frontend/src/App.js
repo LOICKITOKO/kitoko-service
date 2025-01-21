@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import VideoD from './videos/VideoD.mp4'; // Nouvelle vidéo pour l'arrière-plan
+import videoD from './videos/videoD.mp4'; // Nouvelle vidéo pour l'arrière-plan
 import videoA from './videos/videoA.mp4';
 import videoB from './videos/videoB.mp4';
 import videoC from './videos/videoC.mp4';
@@ -145,7 +145,7 @@ function App() {
           } />
         </Routes>
 
-        {/* Footer */}
+         {/* Footer */}
         <footer className="footer-second">
           <div className="footer-content">
             {/* Blog ou actualités */}
