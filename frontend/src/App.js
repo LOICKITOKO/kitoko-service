@@ -21,7 +21,6 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert('Demande envoyée !');
-    // Logique de soumission du formulaire (par exemple avec fetch() pour une API)
   };
 
   return (
@@ -51,35 +50,34 @@ function App() {
               </header>
 
               <section className="services-overview">
-  <h2>Aperçu de nos services</h2>
-  <div className="services-icons">
-    <div className="service">
-      <h3>Service 1</h3>
-      <p>Nettoyage de bureaux</p>
-      <video controls className="service-video">
-        <source src={videoA} type="video/mp4" />
-        Votre navigateur ne prend pas en charge les vidéos HTML5.
-      </video>
-    </div>
-    <div className="service">
-      <h3>Service 2</h3>
-      <p>Entretien ménager</p>
-      <video controls className="service-video">
-        <source src={videoB} type="video/mp4" />
-        Votre navigateur ne prend pas en charge les vidéos HTML5.
-      </video>
-    </div>
-    <div className="service">
-      <h3>Service 3</h3>
-      <p>Nettoyage industriel</p>
-      <video controls className="service-video">
-        <source src={videoC} type="video/mp4" />
-        Votre navigateur ne prend pas en charge les vidéos HTML5.
-      </video>
-    </div>
-  </div>
-</section>
-
+                <h2>Aperçu de nos services</h2>
+                <div className="services-icons">
+                  <div className="service">
+                    <h3>Service 1</h3>
+                    <p>Nettoyage de bureaux</p>
+                    <video controls className="service-video">
+                      <source src={videoA} type="video/mp4" />
+                      Votre navigateur ne prend pas en charge les vidéos HTML5.
+                    </video>
+                  </div>
+                  <div className="service">
+                    <h3>Service 2</h3>
+                    <p>Entretien ménager</p>
+                    <video controls className="service-video">
+                      <source src={videoB} type="video/mp4" />
+                      Votre navigateur ne prend pas en charge les vidéos HTML5.
+                    </video>
+                  </div>
+                  <div className="service">
+                    <h3>Service 3</h3>
+                    <p>Nettoyage industriel</p>
+                    <video controls className="service-video">
+                      <source src={videoC} type="video/mp4" />
+                      Votre navigateur ne prend pas en charge les vidéos HTML5.
+                    </video>
+                  </div>
+                </div>
+              </section>
             </div>
           } />
 
@@ -141,8 +139,51 @@ function App() {
         </Routes>
 
         {/* Footer */}
-        <footer className="footer">
-          <p>© 2025 KITOKO-SERVICE - Tous droits réservés.</p>
+        <footer className="footer-second">
+          <div className="footer-content">
+            {/* Blog ou actualités */}
+            <div className="footer-section">
+              <h3>Blog ou Actualités</h3>
+              <ul>
+                <li>
+                  <button onClick={() => alert('Derniers Articles à venir')} className="link-button">Derniers Articles</button>
+                </li>
+                <li>
+                  <button onClick={() => alert('Conseils de nettoyage à venir')} className="link-button">Conseils de nettoyage</button>
+                </li>
+              </ul>
+            </div>
+
+            {/* Témoignages Clients */}
+            <div className="footer-section">
+              <h3>Témoignages Clients</h3>
+              <ul>
+                <li>
+                  <button onClick={() => alert('Ce que disent nos clients')} className="link-button">Ce que disent nos clients</button>
+                </li>
+                <li>
+                  <button onClick={() => alert('Avis et évaluations')} className="link-button">Avis et évaluations</button>
+                </li>
+              </ul>
+            </div>
+
+            {/* FAQ */}
+            <div className="footer-section">
+              <h3>FAQ</h3>
+              <ul>
+                <li>
+                  <button onClick={() => alert('Questions Fréquentes')} className="link-button">Questions Fréquentes</button>
+                </li>
+                <li>
+                  <button onClick={() => alert('Informations Générales')} className="link-button">Informations Générales</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="footer-bottom">
+            <p>© 2025 KITOKO-SERVICE - Tous droits réservés.</p>
+          </div>
         </footer>
       </div>
     </Router>
