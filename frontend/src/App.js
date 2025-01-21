@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import videoA from './videos/videoA.mp4';
+import videoB from './videos/videoB.mp4';
+import videoC from './videos/videoC.mp4';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -49,21 +52,40 @@ function App() {
 
               <section className="services-overview">
                 <h2>Aperçu de nos services</h2>
-                <div className="services-icons">
-                  <div className="service">
-                    <img src="/service_icons/cleaning-icon.png" alt="Service 1" />
-                    <p>Nettoyage de bureaux</p>
-                  </div>
-                  <div className="service">
-                    <img src="/service_icons/housekeeping-icon.png" alt="Service 2" />
-                    <p>Entretien ménager</p>
-                  </div>
-                  <div className="service">
-                    <img src="/service_icons/office-icon.png" alt="Service 3" />
-                    <p>Nettoyage industriel</p>
-                  </div>
-                </div>
-              </section>
+		  <div className="services-icons">
+
+    {/* Service 1: Nettoyage de bureaux */}
+    <div className="service">
+      <h3>Service 1</h3>
+      <p>Nettoyage de bureaux</p>
+      <video controls className="service-video">
+        <source src="/videos/nettoyage de bureaux.mp4" type="video/mp4" />
+        Votre navigateur ne prend pas en charge les vidéos HTML5.
+      </video>
+    </div>
+
+    {/* Service 2: Entretien ménager */}
+    <div className="service">
+      <h3>Service 2</h3>
+      <p>Entretien ménager</p>
+      <video controls className="service-video">
+        <source src="/videos/entretien ménager.mp4" type="video/mp4" />
+        Votre navigateur ne prend pas en charge les vidéos HTML5.
+      </video>
+    </div>
+
+    {/* Service 3: Nettoyage industriel */}
+    <div className="service">
+      <h3>Service 3</h3>
+      <p>Nettoyage industriel</p>
+      <video controls className="service-video">
+        <source src="/videos/nettoyage industriel.mp4" type="video/mp4" />
+        Votre navigateur ne prend pas en charge les vidéos HTML5.
+      </video>
+    </div>
+
+  </div>
+</section>
             </div>
           } />
 
@@ -118,8 +140,8 @@ function App() {
               <h1>À propos de KITOKO-SERVICE</h1>
               <p>Nous sommes une entreprise spécialisée dans le nettoyage et l'entretien de locaux professionnels et résidentiels.</p>
               <p>Avec des années d'expérience, nous proposons des solutions sur-mesure pour répondre à vos besoins spécifiques.</p>
-	      <p>Nous nous engageons à fournir un service de nettoyage fiable, efficace et respectueux de l'environnement pour garantir la satisfaction de nos clients.</p>
-	      <p>Notre équipe professionnelle utilise des équipements modernes et des produits de qualité pour assurer un nettoyage impeccable à chaque intervention.</p>
+              <p>Nous nous engageons à fournir un service de nettoyage fiable, efficace et respectueux de l'environnement pour garantir la satisfaction de nos clients.</p>
+              <p>Notre équipe professionnelle utilise des équipements modernes et des produits de qualité pour assurer un nettoyage impeccable à chaque intervention.</p>
             </div>
           } />
         </Routes>
@@ -134,4 +156,3 @@ function App() {
 }
 
 export default App;
-
