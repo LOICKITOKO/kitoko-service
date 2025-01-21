@@ -1,0 +1,224 @@
+/* Général */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Conteneur principal */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0066cc;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.navbar-logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.navbar-link:hover {
+  color: #ffcc00;
+}
+
+/* Page d'Accueil */
+.home {
+  padding-top: 80px;
+}
+
+.header {
+  background-color: #0066cc;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.header p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  background-color: #ffcc00;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 18px;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #ff9900;
+}
+
+.services-overview {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.services-overview h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.service {
+  display: inline-block;
+  margin: 20px;
+  text-align: center;
+}
+
+.service img {
+  max-width: 150px;
+  max-height: 150px;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Demande de devis */
+.quote-request {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.quote-request h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  margin: 30px;
+}
+
+* {
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: emoji;
+}
+
+.quote-request p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.quote-form input, .quote-form textarea {
+  width: 40%;
+  padding: 10px;
+  margin: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.quote-form button {
+  padding: 10px 20px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.quote-form button:hover {
+  background-color: #004c99;
+}
+
+/* Contact */
+.contact-page {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-page h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  margin: 20px;
+}
+
+* {
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: emoji;
+}
+
+.contact-page p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  margin: 5px;
+}
+
+/* À propos de nous */
+.about-page {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-page h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  margin: 20px;
+}
+
+.about-page p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  margin: 5px;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  font-size: 14px;
+}
