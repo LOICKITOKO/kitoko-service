@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import VideoD from './videos/VideoD.mp4'; // Nouvelle vidéo pour l'arrière-plan
 import videoA from './videos/videoA.mp4';
 import videoB from './videos/videoB.mp4';
 import videoC from './videos/videoC.mp4';
@@ -28,9 +29,6 @@ function App() {
       <div className="app-container">
         {/* Navbar */}
         <nav className="navbar">
-          <div className="navbar-logo">
-            <Link to="/">KITOKO-SERVICE</Link>
-          </div>
           <div className="navbar-links">
             <Link to="/" className="navbar-link">Accueil</Link>
             <Link to="/contact" className="navbar-link">Contact</Link>
@@ -44,11 +42,20 @@ function App() {
           <Route path="/" element={
             <div className="home">
               <header className="header">
-                <h1>Bienvenue sur KITOKO-SERVICE</h1>
-                <p>Des solutions de nettoyage adaptées à vos besoins.</p>
-                <Link to="/demander-devis" className="cta-button">Demander un devis gratuit maintenant</Link>
+                {/* Vidéo d'arrière-plan */}
+                <video className="background-video" autoPlay loop muted>
+                  <source src={videoD} type="video/mp4" />
+                  Votre navigateur ne supporte pas les vidéos HTML5.
+                </video>
+                {/* Contenu au-dessus de la vidéo */}
+                <div className="header-content">
+                  <h1>Bienvenue sur KITOKO-SERVICE</h1>
+                  <p>Des solutions de nettoyage adaptées à vos besoins.</p>
+                  <Link to="/demander-devis" className="cta-button">Demander un devis gratuit maintenant</Link>
+                </div>
               </header>
 
+              {/* Section des services */}
               <section className="services-overview">
                 <h2>Aperçu de nos services</h2>
                 <div className="services-icons">
@@ -126,7 +133,7 @@ function App() {
             </div>
           } />
 
-          {/* Page À propos de nous */}
+          {/* Page À propos */}
           <Route path="/a-propos" element={
             <div className="about-page">
               <h1>À propos de KITOKO-SERVICE</h1>
