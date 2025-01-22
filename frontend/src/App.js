@@ -5,7 +5,7 @@ import videoD from './videos/videoD.mp4'; // Vidéo d'arrière-plan
 import videoA from './videos/videoA.mp4';
 import videoB from './videos/videoB.mp4';
 import videoC from './videos/videoC.mp4';
-import videoE from './videos/videoE.mp4';
+import videoE from './videos/videoE.mp4'; // Vidéo ajoutée pour nettoyage hôtelier
 
 function App() {
   const [formData, setFormData] = useState({
@@ -61,7 +61,6 @@ function App() {
                 <h2>Aperçu de nos services</h2>
                 <div className="services-icons">
                   <div className="service">
-                    <h3>Service 1</h3>
                     <p>Nettoyage de bureaux</p>
                     <video controls className="service-video">
                       <source src={videoA} type="video/mp4" />
@@ -69,7 +68,6 @@ function App() {
                     </video>
                   </div>
                   <div className="service">
-                    <h3>Service 2</h3>
                     <p>Entretien ménager</p>
                     <video controls className="service-video">
                       <source src={videoB} type="video/mp4" />
@@ -77,19 +75,19 @@ function App() {
                     </video>
                   </div>
                   <div className="service">
-                    <h3>Service 3</h3>
                     <p>Nettoyage industriel</p>
                     <video controls className="service-video">
                       <source src={videoC} type="video/mp4" />
                       Votre navigateur ne prend pas en charge les vidéos HTML5.
                     </video>
-		  <div className="service">
-		  <h3>Nettoyage hôtelier</h3>
-		  <p>Nettoyage de chambres et espaces hôteliers</p>
-		  <video controls className="service-video">
-		  <source src={videoE} type="video/mp4" />
-		  Votre navigateur ne prend pas en charge les vidéos HTML5.
-		  </video>
+                  </div>
+                  {/* Nouvelle vidéo ajoutée */}
+                  <div className="service">
+                    <h3>Nettoyage hôtelier</h3>
+                    <video controls className="service-video">
+                      <source src={videoE} type="video/mp4" />
+                      Votre navigateur ne prend pas en charge les vidéos HTML5.
+                    </video>
                   </div>
                 </div>
               </section>
@@ -161,7 +159,7 @@ function App() {
               <h3>Blog ou Actualités</h3>
               <ul>
                 <li>
-                  <button onClick={() => alert('Derniers Articles à venir')} className="link-button">Derniers Articles</button>
+                  <button onClick={() => alert('Offres à venir')} className="link-button">Offres à venir</button>
                 </li>
                 <li>
                   <button onClick={() => alert('Conseils de nettoyage à venir')} className="link-button">Conseils de nettoyage</button>
