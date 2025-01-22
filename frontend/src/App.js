@@ -5,6 +5,7 @@ import videoD from './videos/videoD.mp4'; // Vidéo d'arrière-plan
 import videoA from './videos/videoA.mp4';
 import videoB from './videos/videoB.mp4';
 import videoC from './videos/videoC.mp4';
+import videoE from './videos/videoE.mp4';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -82,6 +83,13 @@ function App() {
                       <source src={videoC} type="video/mp4" />
                       Votre navigateur ne prend pas en charge les vidéos HTML5.
                     </video>
+		  <div className="service">
+		  <h3>Nettoyage hôtelier</h3>
+		  <p>Nettoyage de chambres et espaces hôteliers</p>
+		  <video controls className="service-video">
+		  <source src={videoE} type="video/mp4" />
+		  Votre navigateur ne prend pas en charge les vidéos HTML5.
+		  </video>
                   </div>
                 </div>
               </section>
