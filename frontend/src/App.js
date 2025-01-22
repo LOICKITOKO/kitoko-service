@@ -11,6 +11,7 @@ function App() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     message: '',
   });
 
@@ -117,6 +118,14 @@ function App() {
                   onChange={handleChange}
                   required
                 />
+		  <input
+		  type="tel"
+		  name="phone"
+		  placeholder="Téléphone"
+		  value={formData.phone}
+		  onChange={handleChange}
+		  required
+		  />
                 <textarea
                   name="message"
                   placeholder="Message"
