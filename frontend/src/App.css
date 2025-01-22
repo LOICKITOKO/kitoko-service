@@ -165,6 +165,14 @@ body {
   background-color: #004c99;
 }
 
+/* Vidéo d'arrière-plan sur la page d'accueil */
+.background-video {
+  object-fit: cover;
+  width: 100%;
+  height: 50vh;
+  margin-top: -20px; /* Ajuste selon la nécessité */
+}
+
 /* Contact */
 .contact-page {
   padding: 60px 20px;
@@ -178,7 +186,7 @@ body {
 }
 
 * {
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
     font-family: emoji;
 }
