@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import Cookies from 'js-cookie';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import videoD from './videos/videoD.mp4'; // Vidéo d'arrière-plan
 import videoA from './videos/videoA.mp4';
@@ -15,15 +16,39 @@ function App() {
     message: '',
   });
 
+const csrftoken = Cookies.get('csrftoken');
+
   // Gestion des changements dans le formulaire
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
   // Gestion de l'envoi du formulaire
-  const handleSubmit = (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Demande envoyée !');
+
+    try {
+      const response = await fetch('http://127.0.0.1:8000/api/devis/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRFToken': csrftoken, // Inclut le token CSRF
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert('Demande envoyée avec succès !');
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        const errorData = await response.json();
+        alert(`Erreur : ${errorData.error}`);
+      }
+    } catch (error) {
+      console.error('Erreur lors de l\'envoi de la demande :', error);
+      alert('Impossible d\'envoyer votre demande pour le moment.');
+    }
   };
 
   return (

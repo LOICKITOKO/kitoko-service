@@ -13,7 +13,17 @@ class Booking(models.Model):
     service = models.ForeignKey(Service, on_delete=models.CASCADE)
     customer_name = models.CharField(max_length=100)
     customer_email = models.EmailField()
-    
+
+class Devis(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.EmailField()
+    phone = models.CharField(max_length=20)
+    message = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Devis de {self.name}"
+
     # Validation du format du numéro de téléphone
     phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$', message="Le numéro de téléphone doit être valide.")
     customer_phone = models.CharField(max_length=15, validators=[phone_regex])
