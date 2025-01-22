@@ -86,10 +86,13 @@ body {
   color: black;
   cursor: pointer;
   transition: background-color 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour le mouvement et l'ombre */
 }
 
 .cta-button:hover {
   background-color: #ff9900;
+  transform: translateY(-5px); /* Légère translation vers le haut lors du survol */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus marquée pour donner l'impression de flottement */
 }
 
 .services-overview {
@@ -223,6 +226,25 @@ body {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ajouter une légère ombre pour donner un effet de profondeur */
   margin-top: 10px;      /* Ajouter un petit espacement au-dessus de la vidéo */
   margin-bottom: 10px;   /* Ajouter un espacement en bas */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajouter une transition pour le zoom et l'ombre */
+}
+
+/* Ajout d'une animation de flottement léger */
+.service-video {
+  animation: floatEffect 3s ease-in-out infinite; /* Animation en boucle */
+}
+
+/* Animation de flottement */
+@keyframes floatEffect {
+  0% {
+    transform: translateY(0); /* Position de départ */
+  }
+  50% {
+    transform: translateY(-10px); /* Légère montée */
+  }
+  100% {
+    transform: translateY(0); /* Retour à la position de départ */
+  }
 }
 
 /* Ajuster les vidéos pour les écrans plus petits */
@@ -279,10 +301,13 @@ button.link-button {
   padding: 8px 12px; /* Espacement interne */
   border: none; /* Retirer la bordure */
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour le mouvement et l'ombre */
 }
 
 button.link-button:hover {
   background-color: #0056b3; /* Couleur de fond au survol */
+  transform: translateY(-5px); /* Légère translation vers le haut lors du survol */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus marquée pour donner l'impression de flottement */
 }
 
 /* Footer */
