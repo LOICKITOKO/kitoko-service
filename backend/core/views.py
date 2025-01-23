@@ -4,6 +4,8 @@ from .serializers import ServiceSerializer, BookingSerializer
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
+from django.core.mail import send_mail
+from django.conf import settings
 
 def home(request):
     return HttpResponse("<h1>Bienvenue sur KITOKO-SERVICE!</h1><p>Le site est en cours de construction.</p>")
@@ -26,10 +28,15 @@ def handle_devis(request):
             phone = data.get('phone')
             message = data.get('message')
 
-            print(f"Nouvelle demande de devis reçue : {name}, {email}, {phone}, {message}")
+             # Logique pour envoyer l'email
+            subject = f"Nouvelle demande de devis de {name}"
+            message_body = f"Nom: {name}\nEmail: {email}\nTéléphone: {phone}\nMessage: {message}"
+            from_email = settings.DEFAULT_FROM_EMAIL
+            to_email = [settings.DEFAULT_FROM_EMAIL]  # L'email où tu veux recevoir la demande
 
-            # Optionnel : Enregistrer dans une base de données
-            # Devis.objects.create(name=name, email=email, phone=phone, message=message)
+            send_mail(subject, message_body, from_email, to_email)
+
+            print(f"Nouvelle demande de devis reçue : {name}, {email}, {phone}, {message}")
 
             return JsonResponse({'message': 'Demande de devis reçue avec succès !'}, status=200)
         except Exception as e:

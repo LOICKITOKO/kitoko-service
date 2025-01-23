@@ -108,6 +108,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Configuration pour envoyer des emails via SMTP
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  # Serveur SMTP de Gmail
+EMAIL_PORT = 587  # Port utilisé par Gmail
+EMAIL_USE_TLS = True  # Sécurisation de la connexion
+EMAIL_HOST_USER = 'kitokoservice05@gmail.com'  # Ton adresse email
+EMAIL_HOST_PASSWORD = 'Kanolp_05'  # Ton mot de passe d'email
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
