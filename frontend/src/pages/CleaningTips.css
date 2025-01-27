@@ -131,3 +131,68 @@ ul li:nth-child(even) {
   bottom: 20px;
   animation: float 4s ease-in-out infinite;
 }
+
+.cleaning-category {
+  position: relative; /* Nécessaire pour positionner les icônes */
+  margin-bottom: 30px;
+}
+
+.cleaning-category h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+/* Animation d'icônes flottantes */
+.floating-icon {
+  position: absolute;
+  right: -40px; /* Ajuste pour positionner les icônes */
+  top: 50%;
+  font-size: 24px;
+  color: #4CAF50;
+  animation: floatIcon 3.5s ease-in-out infinite alternate;
+}
+
+/* Flottement vertical */
+@keyframes floatIcon {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(10px);
+    opacity: 0.8;
+  }
+}
+
+/* Animation des icônes en rotation avec délai */
+.floating-icon:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.floating-icon:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+.floating-icon:nth-child(3) {
+  animation-delay: 2.4s;
+}
+
+/* Jeux de lumière pour les catégories */
+.cleaning-category {
+  animation: lightPlay 3.5s infinite;
+}
+
+@keyframes lightPlay {
+  0%, 100% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: rgba(76, 175, 80, 0.1);
+  }
+}

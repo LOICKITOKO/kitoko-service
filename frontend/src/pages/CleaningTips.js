@@ -5,8 +5,13 @@ const CleaningTips = () => {
   return (
     <div className="cleaning-tips-page">
       <h1>Conseils de Nettoyage</h1>
+
+      {/* Catégorie : Nettoyage de bureaux */}
       <div className="cleaning-category">
         <h2>Nettoyage de bureaux</h2>
+        <span className="floating-icon">💧</span>
+        <span className="floating-icon">✨</span>
+        <span className="floating-icon">🧼</span>
         <ul>
           <li>Planifiez un calendrier régulier : Organisez un planning de nettoyage quotidien, hebdomadaire et mensuel.</li>
           <li>Désinfectez les surfaces fréquemment touchées : poignées, claviers, souris, téléphones, interrupteurs.</li>
@@ -16,8 +21,13 @@ const CleaningTips = () => {
           <li>Assainissez l’air avec des filtres propres ou des purificateurs d'air.</li>
         </ul>
       </div>
+
+      {/* Catégorie : Nettoyage résidentiel */}
       <div className="cleaning-category">
         <h2>Nettoyage résidentiel</h2>
+        <span className="floating-icon">💧</span>
+        <span className="floating-icon">✨</span>
+        <span className="floating-icon">🧼</span>
         <ul>
           <li>Utilisez des produits ménagers non toxiques pour protéger la famille et les animaux.</li>
           <li>Nettoyez pièce par pièce pour éviter les oublis.</li>
@@ -27,8 +37,13 @@ const CleaningTips = () => {
           <li>Désinfectez les zones humides pour prévenir les moisissures.</li>
         </ul>
       </div>
+
+      {/* Catégorie : Nettoyage industriel */}
       <div className="cleaning-category">
         <h2>Nettoyage industriel</h2>
+        <span className="floating-icon">💧</span>
+        <span className="floating-icon">✨</span>
+        <span className="floating-icon">🧼</span>
         <ul>
           <li>Respectez les protocoles de sécurité et portez des équipements de protection.</li>
           <li>Adaptez les produits aux matériaux pour éviter d'endommager les machines.</li>
@@ -37,8 +52,13 @@ const CleaningTips = () => {
           <li>Concentrez vos efforts sur les zones critiques comme les entrepôts et zones de production.</li>
         </ul>
       </div>
+
+      {/* Catégorie : Nettoyage hôtelier */}
       <div className="cleaning-category">
         <h2>Nettoyage hôtelier</h2>
+        <span className="floating-icon">💧</span>
+        <span className="floating-icon">✨</span>
+        <span className="floating-icon">🧼</span>
         <ul>
           <li>Assurez un nettoyage approfondi des chambres entre chaque client.</li>
           <li>Lavez le linge à haute température pour éliminer bactéries et taches.</li>
