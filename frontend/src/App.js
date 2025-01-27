@@ -11,6 +11,7 @@ import logo from './videos/logo.png';
 import CleaningTips from './pages/CleaningTips'; // Import du composant CleaningTips
 import GeneralInfo from './pages/GeneralInfo';
 import AvisEtEvaluations from './pages/AvisEtEvaluations';
+import FAQ from './pages/FAQ';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -192,6 +193,7 @@ function App() {
           <Route path="/conseils-de-nettoyage" element={<CleaningTips />} />
 	  <Route path="/informations-generales" element={<GeneralInfo />} />
 	  <Route path="/avis-et-evaluations" element={<AvisEtEvaluations />} />
+	  <Route path="/faq" element={<FAQ />} />
         </Routes>
 
         {/* Footer */}
@@ -228,7 +230,7 @@ function App() {
               <h3>FAQ</h3>
               <ul>
                 <li>
-                  <button onClick={() => alert('Questions Fréquentes')} className="link-button">Questions Fréquentes</button>
+                  <Link to="/faq" className="link-button">Questions Fréquentes</Link>
                 </li>
                    <Link to="/informations-generales" className="link-button">
                      Informations Générales
