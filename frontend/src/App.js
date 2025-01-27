@@ -7,6 +7,7 @@ import videoA from './videos/videoA.mp4';
 import videoB from './videos/videoB.mp4';
 import videoC from './videos/videoC.mp4';
 import videoE from './videos/videoE.mp4'; // Vidéo ajoutée pour nettoyage hôtelier
+import logo from './videos/logo.png';
 import CleaningTips from './pages/CleaningTips'; // Import du composant CleaningTips
 import GeneralInfo from './pages/GeneralInfo';
 import AvisEtEvaluations from './pages/AvisEtEvaluations';
@@ -79,7 +80,7 @@ function App() {
                 </video>
                 {/* Contenu au-dessus de la vidéo */}
                 <div className="header-content">
-                  <h1>Bienvenue sur KITOKO-SERVICE</h1>
+                                    <img src={logo} alt="KITOKO-SERVICE Logo" className="logo" />
                   <p>Des solutions de nettoyage adaptées à vos besoins.</p>
                   <Link to="/demander-devis" className="cta-button">Demander un devis gratuit maintenant</Link>
                 </div>
