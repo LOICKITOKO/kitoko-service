@@ -9,6 +9,7 @@ import videoC from './videos/videoC.mp4';
 import videoE from './videos/videoE.mp4'; // Vidéo ajoutée pour nettoyage hôtelier
 import CleaningTips from './pages/CleaningTips'; // Import du composant CleaningTips
 import GeneralInfo from './pages/GeneralInfo';
+import AvisEtEvaluations from './pages/AvisEtEvaluations';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -189,6 +190,7 @@ function App() {
           {/* Page Conseils de nettoyage */}
           <Route path="/conseils-de-nettoyage" element={<CleaningTips />} />
 	  <Route path="/informations-generales" element={<GeneralInfo />} />
+	  <Route path="/avis-et-evaluations" element={<AvisEtEvaluations />} />
         </Routes>
 
         {/* Footer */}
@@ -214,10 +216,10 @@ function App() {
                 <li>
                   <button onClick={() => alert('Ce que disent nos clients')} className="link-button">Ce que disent nos clients</button>
                 </li>
-                <li>
-                  <button onClick={() => alert('Avis et évaluations')} className="link-button">Avis et évaluations</button>
-                </li>
-              </ul>
+                   <Link to="/avis-et-evaluations" className="link-button">
+                     Avis et évaluations
+                   </Link>
+                 </ul>
             </div>
 
             {/* FAQ */}

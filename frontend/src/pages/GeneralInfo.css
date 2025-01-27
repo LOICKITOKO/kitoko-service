@@ -175,3 +175,28 @@ ul li:nth-child(even) {
     background-color: rgba(76, 175, 80, 0.1);
   }
 }
+
+.star-rating {
+  text-align: center;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.star {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.star:hover {
+  transform: scale(1.2);
+}
+
+.star-rating p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
