@@ -8,6 +8,7 @@ import videoB from './videos/videoB.mp4';
 import videoC from './videos/videoC.mp4';
 import videoE from './videos/videoE.mp4'; // Vidéo ajoutée pour nettoyage hôtelier
 import CleaningTips from './pages/CleaningTips'; // Import du composant CleaningTips
+import GeneralInfo from './pages/GeneralInfo';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -187,6 +188,7 @@ function App() {
 
           {/* Page Conseils de nettoyage */}
           <Route path="/conseils-de-nettoyage" element={<CleaningTips />} />
+	  <Route path="/informations-generales" element={<GeneralInfo />} />
         </Routes>
 
         {/* Footer */}
@@ -225,10 +227,10 @@ function App() {
                 <li>
                   <button onClick={() => alert('Questions Fréquentes')} className="link-button">Questions Fréquentes</button>
                 </li>
-                <li>
-                  <button onClick={() => alert('Informations Générales')} className="link-button">Informations Générales</button>
-                </li>
-              </ul>
+                   <Link to="/informations-generales" className="link-button">
+                     Informations Générales
+                   </Link>
+                 </ul>
             </div>
           </div>
 
