@@ -1,0 +1,133 @@
+.cleaning-tips-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9; /* Légère couleur de fond pour toute la page */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 36px;
+  animation: fadeIn 2s ease-in-out;
+  margin: 50px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.cleaning-category {
+  margin-bottom: 30px;
+  background-color: #ffffff; /* Fond blanc pour chaque catégorie */
+  border-radius: 8px; /* Bords arrondis pour un effet plus doux */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée subtile */
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Légère élévation au survol des catégories */
+.cleaning-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cleaning-category h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+  position: relative;
+  font-weight: bold;
+}
+
+/* Animation for the category heading */
+.cleaning-category h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #4CAF50;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  100% {
+    width: 50px;
+    left: 0;
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+ul li {
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards; /* 'forwards' pour maintenir l'état final */
+  transition: transform 0.3s ease-in-out;
+}
+
+ul li:hover {
+  transform: translateY(-5px); /* Léger soulèvement au survol */
+  color: #4CAF50; /* Changement de couleur */
+}
+
+ul li:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+
+ul li:nth-child(even) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .cleaning-category h2 {
+    font-size: 22px;
+  }
+
+  ul li {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 28px; /* Ajustement du titre sur mobile */
+  }
+}
+
+/* Floating icons or animations on the right side */
+.cleaning-category::after {
+  content: "💧";
+  font-size: 50px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  animation: float 4s ease-in-out infinite;
+}

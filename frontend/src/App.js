@@ -7,6 +7,7 @@ import videoA from './videos/videoA.mp4';
 import videoB from './videos/videoB.mp4';
 import videoC from './videos/videoC.mp4';
 import videoE from './videos/videoE.mp4'; // Vidéo ajoutée pour nettoyage hôtelier
+import CleaningTips from './pages/CleaningTips'; // Import du composant CleaningTips
 
 function App() {
   const [formData, setFormData] = useState({
@@ -16,16 +17,16 @@ function App() {
     message: '',
   });
 
-const csrftoken = Cookies.get('csrftoken');
+  const csrftoken = Cookies.get('csrftoken');
 
   // Gestion des changements dans le formulaire
-const handleChange = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
   // Gestion de l'envoi du formulaire
-const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
@@ -143,14 +144,14 @@ const handleSubmit = async (e) => {
                   onChange={handleChange}
                   required
                 />
-		  <input
-		  type="tel"
-		  name="phone"
-		  placeholder="Téléphone"
-		  value={formData.phone}
-		  onChange={handleChange}
-		  required
-		  />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Téléphone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                />
                 <textarea
                   name="message"
                   placeholder="Message"
@@ -183,6 +184,9 @@ const handleSubmit = async (e) => {
               <p>Notre équipe professionnelle utilise des équipements modernes et des produits de qualité pour assurer un nettoyage impeccable à chaque intervention.</p>
             </div>
           } />
+
+          {/* Page Conseils de nettoyage */}
+          <Route path="/conseils-de-nettoyage" element={<CleaningTips />} />
         </Routes>
 
         {/* Footer */}
@@ -195,10 +199,10 @@ const handleSubmit = async (e) => {
                 <li>
                   <button onClick={() => alert('Offres à venir')} className="link-button">Offres à venir</button>
                 </li>
-                <li>
-                  <button onClick={() => alert('Conseils de nettoyage à venir')} className="link-button">Conseils de nettoyage</button>
-                </li>
-              </ul>
+                   <Link to="/conseils-de-nettoyage" className="link-button">
+                     Conseils de nettoyage
+                   </Link>
+                 </ul>
             </div>
 
             {/* Témoignages Clients */}
@@ -238,3 +242,4 @@ const handleSubmit = async (e) => {
 }
 
 export default App;
+
