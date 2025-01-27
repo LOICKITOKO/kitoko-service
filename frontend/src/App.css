@@ -95,6 +95,13 @@ body {
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus marquée pour donner l'impression de flottement */
 }
 
+.logo {
+  max-width: 200px; /* Ajustez la taille du logo */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Centrer le logo */
+}
+
 .services-overview {
   text-align: center;
   padding: 50px 20px;
