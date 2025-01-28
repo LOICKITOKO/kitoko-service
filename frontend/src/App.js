@@ -15,6 +15,7 @@ import FAQ from './pages/FAQ';
 import PersonnelQualifie from './pages/PersonnelQualifie';
 import SansEngagement from './pages/SansEngagement';
 import DemandeEmploye from './pages/DemandeEmploye';
+import image1 from './videos/image1.png';
 import image2 from './videos/image2.png'; // Import de l'image 2
 import image3 from './videos/image3.png'; // Import de l'image 3
 import image4 from './videos/image4.png'; // Import de l'image 4
@@ -94,43 +95,43 @@ function App() {
               </header>
 
               {/* Section des services */}
-              <section className="services-overview">
-                <h2>Aperçu de nos services</h2>
-                <div className="services-icons">
-                  <div className="service">
-                    <p>Nettoyage de bureaux</p>
-                    <video controls className="service-video">
-                      <source src={videoA} type="video/mp4" />
-                      Votre navigateur ne prend pas en charge les vidéos HTML5.
-                    </video>
-                  </div>
-                  <div className="service">
-                    <p>Entretien ménager</p>
-                    <video controls className="service-video">
-                      <source src={videoB} type="video/mp4" />
-                      Votre navigateur ne prend pas en charge les vidéos HTML5.
-		    <img src={image2} alt="Entretien ménager" className="service-image" />
-                    </video>
-                  </div>
-                  <div className="service">
-                    <p>Nettoyage industriel</p>
-                    <video controls className="service-video">
-                      <source src={videoC} type="video/mp4" />
-                      Votre navigateur ne prend pas en charge les vidéos HTML5.
-		    <img src={image3} alt="Nettoyage industriel" className="service-image" />
-                    </video>
-                  </div>
-                  {/* Nouvelle vidéo ajoutée */}
-                  <div className="service">
-                    <h3>Nettoyage hôtelier</h3>
-                    <video controls className="service-video">
-                      <source src={videoE} type="video/mp4" />
-                      Votre navigateur ne prend pas en charge les vidéos HTML5.
-		    <img src={image4} alt="Nettoyage hôtelier" className="service-image" />
-                    </video>
-                  </div>
-                </div>
-              </section>
+		  <section className="services-overview">
+		  <h2>Aperçu de nos services</h2>
+		  <div className="services-icons">
+		  <div className="service">
+		  <p>Nettoyage de bureaux</p>
+            <video controls className="service-video">
+              <source src={videoA} type="video/mp4" />
+              Votre navigateur ne prend pas en charge les vidéos HTML5.
+            </video>
+            <img src={image1} alt="Nettoyage de bureaux" className="service-image" />
+          </div>
+          <div className="service">
+            <p>Entretien ménager</p>
+            <video controls className="service-video">
+              <source src={videoB} type="video/mp4" />
+              Votre navigateur ne prend pas en charge les vidéos HTML5.
+            </video>
+            <img src={image2} alt="Entretien ménager" className="service-image" />
+          </div>
+          <div className="service">
+            <p>Nettoyage industriel</p>
+            <video controls className="service-video">
+              <source src={videoC} type="video/mp4" />
+              Votre navigateur ne prend pas en charge les vidéos HTML5.
+            </video>
+            <img src={image3} alt="Nettoyage industriel" className="service-image" />
+          </div>
+          <div className="service">
+            <p>Nettoyage hôtelier</p>
+            <video controls className="service-video">
+              <source src={videoE} type="video/mp4" />
+              Votre navigateur ne prend pas en charge les vidéos HTML5.
+            </video>
+            <img src={image4} alt="Nettoyage hôtelier" className="service-image" />
+          </div>
+        </div>
+      </section>
             </div>
           } />
 

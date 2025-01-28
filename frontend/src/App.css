@@ -118,12 +118,6 @@ body {
   text-align: center;
 }
 
-.service img {
-  max-width: 150px;
-  max-height: 150px;
-  margin-bottom: 10px;
-}
-
 .service p {
   font-size: 25px;
   color: #333;
@@ -227,7 +221,7 @@ body {
 
 /* Appliquer un style pour les vidéos dans la section services */
 .service-video {
-  max-width: 250px;       /* Limite la largeur à 100% de l'élément parent */
+  max-width: 23%;       /* Limite la largeur à 100% de l'élément parent */
   height: auto;          /* Conserve le ratio d'aspect de la vidéo */
   border-radius: 8px;    /* Arrondir légèrement les coins */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ajouter une légère ombre pour donner un effet de profondeur */
@@ -239,13 +233,6 @@ body {
 /* Ajout d'une animation de flottement léger */
 .service-video {
   animation: floatEffect 3s ease-in-out infinite; /* Animation en boucle */
-}
-
-.service-image {
-  width: 100%;
-  height: auto;
-  margin-top: 10px;
-  border-radius: 8px;
 }
 
 /* Animation de flottement */
@@ -263,10 +250,26 @@ body {
 
 /* Ajuster les vidéos pour les écrans plus petits */
 @media (max-width: 768px) {
-  .service-video {
-    max-width: 80%;       /* Sur les petits écrans, la vidéo prendra 80% de la largeur */
-    margin: 0 auto;       /* Centrer la vidéo horizontalement */
+  .service-video, .service-image {
+    max-width: 100%;       /* Sur les petits écrans, la vidéo prendra 80% de la largeur */
+    margin-bottom: 20px;       /* Centrer la vidéo horizontalement */
   }
+}
+
+/* Conteneur pour les vidéos et les images */
+.service-media-container {
+  display: flex;
+  flex-wrap: wrap;           /* Permet de passer à la ligne suivante si nécessaire */
+  justify-content: space-between;  /* Espace entre les éléments */
+  gap: 20px;                 /* Espace entre chaque vidéo ou image */
+}
+
+/* Conteneur des vidéos */
+.service-videos {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* S'assure que les vidéos prennent toute la largeur disponible */
+  gap: 20px;
 }
 
 .footer-second {
