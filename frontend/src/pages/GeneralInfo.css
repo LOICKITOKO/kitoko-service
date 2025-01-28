@@ -69,16 +69,6 @@
   width: 100%;
 }
 
-/* Icône flottante (ℹ️) sur les catégories */
-.info-category::before {
-  content: "ℹ️"; /* Icône d'information */
-  font-size: 40px;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  animation: float 4s ease-in-out infinite;
-}
-
 /* Animation d'icône flottante */
 @keyframes float {
   0% {

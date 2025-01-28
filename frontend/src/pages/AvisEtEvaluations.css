@@ -1,16 +1,18 @@
-/* AvisEtEvaluations.css */
+/* Page Avis et Évaluations */
 .avis-evaluations {
   padding: 20px;
   font-family: Arial, sans-serif;
   background-color: #f9f9f9; /* Légère couleur de fond pour toute la page */
+  animation: lightPlay 3.5s infinite; /* Effet de lumière sur toute la page */
 }
 
+/* Animation d'apparition du titre principal */
 h1 {
   text-align: center;
   margin-bottom: 30px;
   color: #333;
   font-size: 36px;
-  animation: fadeIn 2s ease-in-out;
+  animation: fadeIn 2s ease-in-out; /* Animation d'apparition du titre */
   margin: 50px;
 }
 
@@ -27,7 +29,7 @@ h1 {
 .stars {
   text-align: center;
   margin-bottom: 30px;
-  animation: fadeInUp 1s ease-out forwards;
+  animation: fadeInUp 1s ease-out forwards; /* Animation de fadeIn pour les étoiles */
 }
 
 /* Effet de "survol" des étoiles */
@@ -58,7 +60,7 @@ textarea {
   resize: none;
   margin-bottom: 20px;
   opacity: 0;
-  animation: fadeInUp 1s ease-out forwards;
+  animation: fadeInUp 1s ease-out forwards; /* Animation de fadeIn pour la zone de texte */
 }
 
 /* Mise en forme du bouton */
@@ -75,7 +77,7 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #45a049; /* Changement de couleur au survol */
 }
 
 /* Alignement du bouton et du champ de texte sur la même ligne */
@@ -117,13 +119,13 @@ ul li {
   line-height: 1.5;
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 0.8s ease-out forwards; /* 'forwards' pour maintenir l'état final */
+  animation: fadeInUp 0.8s ease-out forwards; /* Animation d'apparition des avis */
   transition: transform 0.3s ease-in-out;
 }
 
 ul li:hover {
   transform: translateY(-5px); /* Léger soulèvement au survol */
-  color: #4CAF50; /* Changement de couleur */
+  color: #007BFF; /* Changement de couleur en bleu clair */
 }
 
 ul li:nth-child(odd) {
@@ -145,7 +147,7 @@ ul li:nth-child(even) {
   }
 }
 
-/* Responsiveness */
+/* Responsive */
 @media (max-width: 768px) {
   h1 {
     font-size: 28px; /* Ajustement du titre sur mobile */
@@ -164,16 +166,12 @@ ul li:nth-child(even) {
   }
 }
 
-/* Jeux de lumière pour chaque catégorie */
-.avis-evaluations {
-  animation: lightPlay 3.5s infinite;
-}
-
+/* Effet de lumière bleu pour la page des avis */
 @keyframes lightPlay {
   0%, 100% {
     background-color: transparent;
   }
   50% {
-    background-color: rgba(76, 175, 80, 0.1);
+    background-color: rgba(0, 123, 255, 0.1); /* Bleu doux */
   }
 }
