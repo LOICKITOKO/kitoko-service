@@ -15,6 +15,9 @@ import FAQ from './pages/FAQ';
 import PersonnelQualifie from './pages/PersonnelQualifie';
 import SansEngagement from './pages/SansEngagement';
 import DemandeEmploye from './pages/DemandeEmploye';
+import image2 from './videos/image2.png'; // Import de l'image 2
+import image3 from './videos/image3.png'; // Import de l'image 3
+import image4 from './videos/image4.png'; // Import de l'image 4
 
 function App() {
   const [formData, setFormData] = useState({
@@ -106,6 +109,7 @@ function App() {
                     <video controls className="service-video">
                       <source src={videoB} type="video/mp4" />
                       Votre navigateur ne prend pas en charge les vidéos HTML5.
+		    <img src={image2} alt="Entretien ménager" className="service-image" />
                     </video>
                   </div>
                   <div className="service">
@@ -113,6 +117,7 @@ function App() {
                     <video controls className="service-video">
                       <source src={videoC} type="video/mp4" />
                       Votre navigateur ne prend pas en charge les vidéos HTML5.
+		    <img src={image3} alt="Nettoyage industriel" className="service-image" />
                     </video>
                   </div>
                   {/* Nouvelle vidéo ajoutée */}
@@ -121,6 +126,7 @@ function App() {
                     <video controls className="service-video">
                       <source src={videoE} type="video/mp4" />
                       Votre navigateur ne prend pas en charge les vidéos HTML5.
+		    <img src={image4} alt="Nettoyage hôtelier" className="service-image" />
                     </video>
                   </div>
                 </div>

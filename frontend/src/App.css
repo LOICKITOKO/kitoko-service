@@ -241,6 +241,13 @@ body {
   animation: floatEffect 3s ease-in-out infinite; /* Animation en boucle */
 }
 
+.service-image {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
 /* Animation de flottement */
 @keyframes floatEffect {
   0% {
