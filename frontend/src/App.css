@@ -317,6 +317,38 @@ button.link-button:hover {
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus marquée pour donner l'impression de flottement */
 }
 
+.footer-second-alt {
+  background-color: #f4f4f4; /* Couleur de fond claire */
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-second-alt-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Espace entre les éléments */
+}
+
+.footer-second-alt-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #0099ff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+}
+
+.footer-second-alt p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
 /* Footer */
 footer {
   background-color: #222;

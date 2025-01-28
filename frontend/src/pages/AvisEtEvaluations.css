@@ -13,7 +13,7 @@ h1 {
   color: #333;
   font-size: 36px;
   animation: fadeIn 2s ease-in-out; /* Animation d'apparition du titre */
-  margin: 50px;
+  margin: 80px;
 }
 
 @keyframes fadeIn {

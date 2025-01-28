@@ -12,6 +12,9 @@ import CleaningTips from './pages/CleaningTips'; // Import du composant Cleaning
 import GeneralInfo from './pages/GeneralInfo';
 import AvisEtEvaluations from './pages/AvisEtEvaluations';
 import FAQ from './pages/FAQ';
+import PersonnelQualifie from './pages/PersonnelQualifie';
+import SansEngagement from './pages/SansEngagement';
+import DemandeEmploye from './pages/DemandeEmploye';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -194,7 +197,39 @@ function App() {
 	  <Route path="/informations-generales" element={<GeneralInfo />} />
 	  <Route path="/avis-et-evaluations" element={<AvisEtEvaluations />} />
 	  <Route path="/faq" element={<FAQ />} />
+	  <Route path="/personnel-qualifie" element={<PersonnelQualifie />} />
+          <Route path="/sans-engagement" element={<SansEngagement />} />
+          <Route path="/demande-employe" element={<DemandeEmploye />} />
         </Routes>
+
+	  {/* Nouveau Footer avant l'existant */}
+<div className="footer-second-alt">
+  <div className="footer-second-alt-content">
+    {/* Cercle avec salutation des mains */}
+    <div className="footer-second-alt-circle">
+      <span role="img" aria-label="salutation">✅</span>
+    </div>
+    <Link to="/personnel-qualifie" className="footer-link">
+      <p>Personnel qualifié</p>
+    </Link>
+    
+    {/* Cercle avec X */}
+    <div className="footer-second-alt-circle">
+      <span role="img" aria-label="X">❌</span>
+    </div>
+    <Link to="/sans-engagement" className="footer-link">
+      <p>Sans engagement</p>
+    </Link>
+    
+    {/* Cercle avec Yes */}
+    <div className="footer-second-alt-circle">
+      <span role="img" aria-label="Yes">📋</span>
+    </div>
+    <Link to="/demande-employe" className="footer-link">
+      <p>Demandez un(e) employé(e)</p>
+    </Link>
+  </div>
+</div>
 
         {/* Footer */}
         <footer className="footer-second">
@@ -206,9 +241,9 @@ function App() {
                 <li>
                   <button onClick={() => alert('Offres à venir')} className="link-button">Offres à venir</button>
                 </li>
-                   <Link to="/conseils-de-nettoyage" className="link-button">
-                     Conseils de nettoyage
-                   </Link>
+	           <li>
+                   <Link to="/conseils-de-nettoyage" className="link-button">Conseils de nettoyage</Link>
+                   </li>
                  </ul>
             </div>
 
@@ -219,9 +254,9 @@ function App() {
                 <li>
                   <button onClick={() => alert('Ce que disent nos clients')} className="link-button">Ce que disent nos clients</button>
                 </li>
-                   <Link to="/avis-et-evaluations" className="link-button">
-                     Avis et évaluations
-                   </Link>
+	           <li>
+                   <Link to="/avis-et-evaluations" className="link-button">Avis et évaluations</Link>
+                   </li>
                  </ul>
             </div>
 
@@ -232,9 +267,9 @@ function App() {
                 <li>
                   <Link to="/faq" className="link-button">Questions Fréquentes</Link>
                 </li>
-                   <Link to="/informations-generales" className="link-button">
-                     Informations Générales
-                   </Link>
+	           <li>
+                   <Link to="/informations-generales" className="link-button">Informations Générales</Link>
+                   </li>
                  </ul>
             </div>
           </div>
@@ -249,4 +284,3 @@ function App() {
 }
 
 export default App;
-
