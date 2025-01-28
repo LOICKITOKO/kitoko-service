@@ -26,6 +26,11 @@ function App() {
     email: '',
     phone: '',
     message: '',
+    address: '', // Nouveau champ
+    companyOrIndividual: '', // Choix entreprise ou particulier
+    companyOrIndividualName: '', // Nom de l'entreprise ou du particulier
+    gender: '', // Nouveau champ pour le sexe de l'employé
+    desiredDate: '', // Nouveau champ pour la date souhaitée pour la venue
   });
 
   const csrftoken = Cookies.get('csrftoken');
@@ -52,7 +57,7 @@ function App() {
 
       if (response.ok) {
         alert('Demande envoyée avec succès !');
-        setFormData({ name: '', email: '', phone: '', message: '' });
+        setFormData({ name: '', email: '', phone: '', message: '', address: '', companyOrIndividual: '', companyOrIndividualName: '', gender: '', desiredDate: '' });
       } else {
         const errorData = await response.json();
         alert(`Erreur : ${errorData.error}`);
@@ -137,12 +142,85 @@ function App() {
           } />
 
           {/* Page Demander un devis */}
-          <Route path="/demander-devis" element={
-            <div className="quote-request">
-              <h1>Demandez un devis gratuit</h1>
-              <p>Nous vous contacterons dans les plus brefs délais pour discuter de vos besoins de nettoyage.</p>
+	  <Route path="/demander-devis" element={
+  <div className="quote-request">
+    <h1>Demandez un devis gratuit</h1>
+    <p>Nous vous contacterons dans les plus brefs délais pour discuter de vos besoins de nettoyage.</p>
 
-              <form onSubmit={handleSubmit} className="quote-form">
+    <form onSubmit={handleSubmit} className="quote-form">
+      <input
+        type="text"
+        name="name"
+        placeholder="Nom"
+        value={formData.name}
+        onChange={handleChange}
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        value={formData.email}
+        onChange={handleChange}
+        required
+      />
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Téléphone"
+        value={formData.phone}
+        onChange={handleChange}
+        required
+      />
+
+      {/* Champs supplémentaires */}
+      <input
+        type="text"
+        name="address"
+        placeholder="Adresse"
+        value={formData.address}
+        onChange={handleChange}
+        required
+      />
+      <select
+        name="companyOrIndividual"
+        value={formData.companyOrIndividual}
+        onChange={handleChange}
+        required
+      >
+        <option value="">Choisissez Entreprise ou Particulier</option>
+        <option value="Entreprise">Entreprise</option>
+        <option value="Particulier">Particulier</option>
+      </select>
+      <input
+        type="text"
+        name="companyOrIndividualName"
+        placeholder="Nom de l'entreprise ou du particulier"
+        value={formData.companyOrIndividualName}
+        onChange={handleChange}
+        required
+      />
+
+	<textarea
+        name="message"
+        placeholder="Message"
+        value={formData.message}
+        onChange={handleChange}
+        required
+      ></textarea>
+
+      <button type="submit">Envoyer la demande</button>
+    </form>
+  </div>
+} />
+
+	{/* Page Demander un employé */}
+          <Route path="/demande-employe" element={
+            <div className="employee-request">
+              <h1>Demander un(e) employé(e)</h1>
+              <p>Nous vous mettrons en relation avec un employé qualifié en fonction de vos besoins.</p>
+
+              <form onSubmit={handleSubmit} className="employee-form">
                 <input
                   type="text"
                   name="name"
@@ -167,13 +245,58 @@ function App() {
                   onChange={handleChange}
                   required
                 />
-                <textarea
-                  name="message"
-                  placeholder="Message"
-                  value={formData.message}
+
+                {/* Champs supplémentaires */}
+                <input
+                  type="text"
+                  name="address"
+                  placeholder="Adresse"
+                  value={formData.address}
                   onChange={handleChange}
                   required
-                ></textarea>
+                />
+
+		  {/* Nouveau champ pour le sexe de l'employé */}
+                <select
+                  name="gender"
+                  value={formData.gender}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Choisissez le sexe de l'employé</option>
+                  <option value="Homme">Homme</option>
+                  <option value="Femme">Femme</option>
+		  <option value="Indifféré">Indifféré</option> {/* Nouvelle option */}
+                </select>
+
+                {/* Nouveau champ pour la date souhaitée pour la venue */}
+                <input
+                  type="date"
+                  name="desiredDate"
+                  value={formData.desiredDate}
+                  onChange={handleChange}
+                  required
+                />
+
+                <select
+                  name="companyOrIndividual"
+                  value={formData.companyOrIndividual}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Choisissez Entreprise ou Particulier</option>
+                  <option value="Entreprise">Entreprise</option>
+                  <option value="Particulier">Particulier</option>
+                </select>
+                <input
+                  type="text"
+                  name="companyOrIndividualName"
+                  placeholder="Nom de l'entreprise ou du particulier"
+                  value={formData.companyOrIndividualName}
+                  onChange={handleChange}
+                  required
+                />
+
                 <button type="submit">Envoyer la demande</button>
               </form>
             </div>
