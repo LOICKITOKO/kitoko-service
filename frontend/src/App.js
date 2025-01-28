@@ -72,6 +72,7 @@ function App() {
             <Link to="/" className="navbar-link">Accueil</Link>
             <Link to="/contact" className="navbar-link">Contact</Link>
             <Link to="/a-propos" className="navbar-link">À propos</Link>
+	    <Link to="/nos-tarifs" className="navbar-link">Nos Tarifs</Link>
           </div>
         </nav>
 
@@ -196,6 +197,23 @@ function App() {
               <p>Avec des années d'expérience, nous proposons des solutions sur-mesure pour répondre à vos besoins spécifiques.</p>
               <p>Nous nous engageons à fournir un service de nettoyage fiable, efficace et respectueux de l'environnement pour garantir la satisfaction de nos clients.</p>
               <p>Notre équipe professionnelle utilise des équipements modernes et des produits de qualité pour assurer un nettoyage impeccable à chaque intervention.</p>
+            </div>
+          } />
+
+	  {/* Page Nos Tarifs */}
+          <Route path="/nos-tarifs" element={
+            <div className="pricing-page">
+              <h1>Nos Tarifs</h1>
+              <div className="pricing">
+                <h2>Nos Tarifs</h2>
+                <ul>
+                  <li>Nettoyage de bureaux : Mensuel / Sur devis , 25€ / Passage</li>
+                  <li>Entretien ménager : 50€ / visite</li>
+                  <li>Nettoyage industriel : Mensuel / Sur devis , 150€ / Intervention</li>
+                  <li>Nettoyage hôtelier : Sur devis</li>
+                </ul>
+                <p>Contactez-nous pour un devis personnalisé adapté à vos besoins !</p>
+              </div>
             </div>
           } />
 
