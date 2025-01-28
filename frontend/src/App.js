@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './App.css';
 import Cookies from 'js-cookie';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import logo from './videos/logo.png';
 import CleaningTips from './pages/CleaningTips';
 import GeneralInfo from './pages/GeneralInfo';
 import AvisEtEvaluations from './pages/AvisEtEvaluations';
@@ -79,8 +78,7 @@ function App() {
             <div className="home">
               <header className="header">
                 <div className="header-content">
-                  <img src={logo} alt="KITOKO-SERVICE Logo" className="logo" />
-                  <p>Des solutions de nettoyage adaptées à vos besoins.</p>
+                  <p>KITOKO-SERVICE Des Solutions De Nettoyage Adaptées à Vos Besoins.</p>
                   <Link to="/demander-devis" className="cta-button">Demander un devis gratuit maintenant</Link>
                 </div>
               </header>
