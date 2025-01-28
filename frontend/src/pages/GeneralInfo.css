@@ -1,18 +1,23 @@
+/* Page Informations Générales */
 .general-info-page {
   padding: 20px;
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9; /* Légère couleur de fond pour toute la page */
+  background-color: #f9f9f9;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
-h1 {
+/* Titre principal */
+.general-info-page h1 {
   text-align: center;
-  margin-bottom: 30px;
   color: #333;
   font-size: 36px;
+  margin-bottom: 30px;
   animation: fadeIn 2s ease-in-out;
-  margin: 50px;
 }
 
+/* Animation d'apparition */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -22,45 +27,56 @@ h1 {
   }
 }
 
+/* Section des catégories d'information */
 .info-category {
-  margin-bottom: 30px;
-  background-color: #ffffff; /* Fond blanc pour chaque catégorie */
-  border-radius: 8px; /* Bords arrondis pour un effet plus doux */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée subtile */
-  padding: 20px;
-  position: relative; /* Nécessaire pour positionner les icônes */
-  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Légère élévation au survol des catégories avec une couleur bleu flou */
+/* Survol d'une catégorie */
 .info-category:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3); /* Bleu flou lors du survol */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Icônes dynamiques associées à chaque catégorie */
-.info-category::before {
-  font-size: 50px;
+/* Titre des catégories d'information */
+.info-category h2 {
+  font-size: 24px;
+  color: #333;
+  margin: 20px;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Animation d'underline pour les titres */
+.info-category h2::after {
+  content: "";
   position: absolute;
-  top: 20px;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #007BFF;
+  transition: width 0.3s ease-in-out;
+}
+
+.info-category:hover h2::after {
+  width: 100%;
+}
+
+/* Icône flottante (ℹ️) sur les catégories */
+.info-category::before {
+  content: "ℹ️"; /* Icône d'information */
+  font-size: 40px;
+  position: absolute;
   right: 20px;
-  animation: float 3s ease-in-out infinite;
-}
-
-.info-category:nth-child(1)::before {
-  content: "📋"; /* Icône pour "Matricule d'agrée" */
-}
-
-.info-category:nth-child(2)::before {
-  content: "🔍"; /* Icône pour "Recherches ou FAQ" */
-}
-
-.info-category:nth-child(3)::before {
-  content: "📦"; /* Icône pour "Services liés ou solutions" */
-}
-
-.info-category:nth-child(4)::before {
-  content: "🔒"; /* Icône pour "Politique de confidentialité" */
+  top: 20px;
+  animation: float 4s ease-in-out infinite;
 }
 
 /* Animation d'icône flottante */
@@ -79,65 +95,23 @@ h1 {
   }
 }
 
-.info-category h2 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 15px;
-  position: relative;
-  font-weight: bold;
-}
-
-/* Animation pour le titre de chaque catégorie */
-.info-category h2::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50px;
-  height: 2px;
-  background-color: #007BFF; /* Ligne bleue sous les titres */
-  animation: slideIn 1s ease-in-out;
-}
-
-@keyframes slideIn {
-  0% {
-    width: 0;
-    left: 0;
-  }
-  100% {
-    width: 50px;
-    left: 0;
-  }
-}
-
+/* Liste d'informations */
 ul {
   list-style: none;
   padding-left: 20px;
 }
 
+/* Élément de liste */
 ul li {
   margin: 10px 0;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.6;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.8s ease-out forwards;
-  transition: transform 0.3s ease-in-out;
 }
 
-ul li:hover {
-  transform: translateY(-5px); /* Léger soulèvement au survol */
-  color: #007BFF; /* Texte en bleu lors du survol */
-}
-
-ul li:nth-child(odd) {
-  animation-delay: 0.2s;
-}
-
-ul li:nth-child(even) {
-  animation-delay: 0.4s;
-}
-
+/* Animation de la liste */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -149,22 +123,35 @@ ul li:nth-child(even) {
   }
 }
 
-/* Responsiveness */
+/* Affichage de la réponse */
+ul li.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Survol des éléments de liste */
+ul li:hover {
+  color: #007BFF; /* Changement de couleur */
+  cursor: pointer;
+  transform: translateY(-5px); /* Soulèvement lors du survol */
+}
+
+/* Responsive */
 @media (max-width: 768px) {
+  .general-info-page h1 {
+    font-size: 28px;
+  }
+
   .info-category h2 {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   ul li {
     font-size: 14px;
   }
-
-  h1 {
-    font-size: 28px;
-  }
 }
 
-/* Animation lumineuse pour chaque catégorie avec bleu uniquement */
+/* Animation des catégories pour rendre la page vivante */
 .info-category {
   animation: lightPlay 3.5s infinite;
 }
@@ -174,6 +161,25 @@ ul li:nth-child(even) {
     background-color: transparent;
   }
   50% {
-    background-color: rgba(0, 123, 255, 0.1); /* Bleu léger */
+    background-color: rgba(0, 123, 255, 0.1); /* Bleu doux */
+  }
+}
+
+/* Ombre légère pour l'effet de lumière sur la catégorie */
+.info-category:hover {
+  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.2); /* Ombre bleue sur survol */
+}
+
+/* Jeux de lumière pour chaque catégorie */
+.info-category {
+  animation: lightPulse 4s ease-in-out infinite;
+}
+
+@keyframes lightPulse {
+  0%, 100% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: rgba(0, 123, 255, 0.05); /* Effet bleu léger */
   }
 }
