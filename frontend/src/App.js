@@ -85,41 +85,160 @@ function App() {
                 </div>
               </header>
 
-		  <section className="service-line">
-  <div className="service-image-container">
-    <img src={image1} alt="Service Image" className="service-image" />
-  </div>
-  <div className="blue-page"></div> {/* Page bleue à droite */}
-</section>
+		  <section className="cleaning-services">
 
-<section className="service-line reverse">
-  <div className="blue-page"></div> {/* Page bleue à gauche */}
-  <div className="service-image-container">
-    <img src={image2} alt="Service Image" className="service-image" />
-  </div>
-</section>
+  {/* Section nettoyage de bureaux */}
+  <section className="office-cleaning-services">
+    <div className="service-container">
+      <div className="service-image">
+        <img src={image1} alt="Nettoyage de bureaux" />
+      </div>
+      <div className="service-content">
+        <h2>Pourquoi choisir notre service de nettoyage pour bureaux ?</h2>
+        <div className="cleaning-arguments">
+          <div className="argument">
+            <h3>Amélioration de la productivité :</h3>
+            <p>Un bureau propre booste la concentration des employés et crée un environnement de travail sain, propice à une meilleure efficacité.</p>
+          </div>
+          <div className="argument">
+            <h3>Première impression professionnelle :</h3>
+            <p>Un bureau bien entretenu reflète une image soignée et professionnelle de votre entreprise, laissant une excellente impression sur vos clients et partenaires.</p>
+          </div>
+        </div>
+        <h2>Nos services incluent :</h2>
+        <ul className="services-list">
+          <li>Nettoyage des surfaces de bureau (tables, chaises, comptoirs)</li>
+          <li>Désinfection des claviers et téléphones</li>
+          <li>Entretien des moquettes et tapis de bureaux</li>
+          <li>Nettoyage des vitres et miroirs</li>
+          <li>Purification de l’air avec des désodorisants naturels</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<section className="service-line">
-  <div className="service-image-container">
-    <img src={image3} alt="Service Image" className="service-image" />
-  </div>
-  <div className="blue-page"></div> {/* Page bleue à droite */}
-</section>
+  {/* Section nettoyage résidentiel */}
+  <section className="residential-cleaning-services">
+    <div className="service-container">
+      <div className="service-image">
+        <img src={image2} alt="Nettoyage résidentiel" />
+      </div>
+      <div className="service-content">
+        <h2>Pourquoi choisir notre service de nettoyage résidentiel ?</h2>
+        <div className="cleaning-arguments">
+          <div className="argument">
+            <h3>Confort et bien-être :</h3>
+            <p>Un environnement propre et organisé favorise la relaxation et le bien-être à la maison, créant un espace plus agréable pour vous et votre famille.</p>
+          </div>
+          <div className="argument">
+            <h3>Gain de temps :</h3>
+            <p>Confiez-nous le nettoyage de votre maison pour gagner du temps et profiter d'un espace parfaitement propre sans effort.</p>
+          </div>
+        </div>
+        <h2>Nos services incluent :</h2>
+        <ul className="services-list">
+          <li>Nettoyage des sols (parquet, moquette, carrelage)</li>
+          <li>Nettoyage des cuisines et salles de bain</li>
+          <li>Dépoussiérage des meubles et objets</li>
+          <li>Nettoyage des fenêtres et miroirs</li>
+          <li>Changement de literie et rangement</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<section className="service-line reverse">
-  <div className="blue-page"></div> {/* Page bleue à gauche */}
-  <div className="service-image-container">
-    <img src={image4} alt="Service Image" className="service-image" />
-  </div>
-</section>
+  {/* Section nettoyage industriel */}
+  <section className="industrial-cleaning-services">
+    <div className="service-container">
+      <div className="service-image">
+        <img src={image3} alt="Nettoyage industriel" />
+      </div>
+      <div className="service-content">
+        <h2>Pourquoi choisir notre service de nettoyage industriel ?</h2>
+        <div className="cleaning-arguments">
+          <div className="argument">
+            <h3>Normes de sécurité respectées :</h3>
+            <p>Nos services assurent un environnement de travail propre et sécurisé, respectant les normes de sécurité et d'hygiène de votre industrie.</p>
+          </div>
+          <div className="argument">
+            <h3>Durabilité des équipements :</h3>
+            <p>Un nettoyage régulier prolonge la durée de vie de vos machines et équipements, réduisant ainsi les coûts d'entretien à long terme.</p>
+          </div>
+        </div>
+        <h2>Nos services incluent :</h2>
+        <ul className="services-list">
+          <li>Nettoyage des ateliers de production et des machines</li>
+          <li>Entretien des sols industriels</li>
+          <li>Désinfection des surfaces de travail</li>
+          <li>Élimination des déchets et nettoyage des espaces de stockage</li>
+          <li>Vider les poubelles et gérer les déchets dangereux</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<section className="service-line">
-  <div className="service-image-container">
-    <img src={image5} alt="Service Image" className="service-image" />
-  </div>
-  <div className="blue-page"></div> {/* Page bleue à droite */}
+  {/* Section nettoyage hôtelier */}
+  <section className="hotel-cleaning-services">
+    <div className="service-container">
+      <div className="service-image">
+        <img src={image4} alt="Nettoyage hôtelier" />
+      </div>
+      <div className="service-content">
+        <h2>Pourquoi choisir notre service de nettoyage hôtelier ?</h2>
+        <div className="cleaning-arguments">
+          <div className="argument">
+            <h3>Confort des clients :</h3>
+            <p>Un hôtel propre crée une expérience agréable et mémorable pour vos clients, augmentant la satisfaction et les avis positifs.</p>
+          </div>
+          <div className="argument">
+            <h3>Conformité aux normes sanitaires :</h3>
+            <p>Nous respectons les normes d'hygiène strictes pour garantir la sécurité et la santé de vos clients et employés.</p>
+          </div>
+        </div>
+        <h2>Nos services incluent :</h2>
+        <ul className="services-list">
+          <li>Nettoyage des chambres et des suites</li>
+          <li>Entretien des espaces publics (hall, couloirs, ascenseurs)</li>
+          <li>Changement de literie et de serviettes</li>
+          <li>Nettoyage des sanitaires et des cuisines</li>
+          <li>Entretien des espaces extérieurs (terrasses, jardins)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  {/* Section nettoyage de magasins */}
+  <section className="store-cleaning-services">
+    <div className="service-container">
+      <div className="service-image">
+        <img src={image5} alt="Nettoyage magasin" />
+      </div>
+      <div className="service-content">
+        <h2>Pourquoi choisir notre service de nettoyage pour magasins ?</h2>
+        <div className="cleaning-arguments">
+          <div className="argument">
+            <h3>Attractivité accrue :</h3>
+            <p>Un magasin propre et bien entretenu attire davantage de clients, leur offrant une expérience de shopping agréable et confortable.</p>
+          </div>
+          <div className="argument">
+            <h3>Conformité aux normes d'hygiène :</h3>
+            <p>Nous garantissons que votre magasin respecte les normes de propreté et d’hygiène, essentiel pour assurer la sécurité des clients et du personnel.</p>
+          </div>
+        </div>
+        <h2>Nos services incluent :</h2>
+        <ul className="services-list">
+          <li>Nettoyage des surfaces de vente (étagères, comptoirs, caisses)</li>
+          <li>Entretien des vitrines et portes d'entrée</li>
+          <li>Nettoyage des sols (carrelage, moquette, parquet)</li>
+          <li>Désinfection des zones fréquemment touchées (poignées de porte, interrupteurs)</li>
+          <li>Vider les poubelles et gérer les déchets</li>
+          <li>Entretien des zones de stockage et des espaces de préparation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </section>
-            </div>
+		  </div>
           } />
 
           <Route path="/demander-devis" element={
