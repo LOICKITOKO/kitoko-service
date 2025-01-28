@@ -76,7 +76,7 @@ body {
 .header p {
   font-size: 20px;
   margin-bottom: 40px;
-}
+} 
 
 .cta-button {
   background-color: #ffcc00;
@@ -136,9 +136,9 @@ body {
 }
 
 * {
-    padding: 20px;
-    box-sizing: border-box;
-    font-family: emoji;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: emoji;
 }
 
 .quote-request p {
@@ -166,33 +166,77 @@ body {
 }
 
 form button {
-    padding: 10px 20px;
-    background-color: #2ecc71;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 16px;
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
 }
 
 .quote-form button:hover {
   background-color: #004c99;
 }
 
-/* Vidéo d'arrière-plan sur la page d'accueil */
-.background-video {
-  object-fit: cover;
-  width: 70%;
-  height: 50vh;
-  margin-top: -20px; /* Ajuste selon la nécessité */
+/* Section de chaque ligne */
+.service-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+}
+
+/* Pour la page bleue (à droite ou à gauche) */
+.blue-page {
+  width: 30%;
+  height: 300px;
+  background-color: #0066cc; /* Couleur bleue */
+}
+
+/* Pour l'image */
+.service-image-container {
+  width: 65%;
+  display: flex;
+  justify-content: center;
+}
+
+.service-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Inversion de la disposition pour certaines lignes */
+.service-line.reverse {
+  flex-direction: row-reverse; /* Change la direction pour inverser l'image et la page bleue */
+}
+
+/* Responsivité pour les écrans plus petits */
+@media (max-width: 768px) {
+  .service-line {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blue-page {
+    width: 100%;
+    height: 200px; /* Réduit la hauteur pour les petits écrans */
+    margin-bottom: 20px;
+  }
+
+  .service-image-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 /* Contact */
 .contact-page {
   padding: 60px 20px;
   text-align: center;
-}
+} 
 
 .contact-page h1 {
   font-size: 36px;
@@ -201,9 +245,9 @@ form button {
 }
 
 * {
-    padding: 10px;
-    box-sizing: border-box;
-    font-family: emoji;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: emoji;
 }
 
 .contact-page p {
@@ -270,66 +314,6 @@ form button {
 .pricing p {
   font-size: 16px;
   color: #555;
-}
-
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Ajuster l'élément pour qu'il soit parfaitement centré */
-}
-
-/* Appliquer un style pour les vidéos dans la section services */
-.service-video {
-  max-width: 23%;       /* Limite la largeur à 100% de l'élément parent */
-  height: auto;          /* Conserve le ratio d'aspect de la vidéo */
-  border-radius: 8px;    /* Arrondir légèrement les coins */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ajouter une légère ombre pour donner un effet de profondeur */
-  margin-top: 10px;      /* Ajouter un petit espacement au-dessus de la vidéo */
-  margin-bottom: 10px;   /* Ajouter un espacement en bas */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajouter une transition pour le zoom et l'ombre */
-}
-
-/* Ajout d'une animation de flottement léger */
-.service-video {
-  animation: floatEffect 3s ease-in-out infinite; /* Animation en boucle */
-}
-
-/* Animation de flottement */
-@keyframes floatEffect {
-  0% {
-    transform: translateY(0); /* Position de départ */
-  }
-  50% {
-    transform: translateY(-10px); /* Légère montée */
-  }
-  100% {
-    transform: translateY(0); /* Retour à la position de départ */
-  }
-}
-
-/* Ajuster les vidéos pour les écrans plus petits */
-@media (max-width: 768px) {
-  .service-video, .service-image {
-    max-width: 100%;       /* Sur les petits écrans, la vidéo prendra 80% de la largeur */
-    margin-bottom: 20px;       /* Centrer la vidéo horizontalement */
-  }
-}
-
-/* Conteneur pour les vidéos et les images */
-.service-media-container {
-  display: flex;
-  flex-wrap: wrap;           /* Permet de passer à la ligne suivante si nécessaire */
-  justify-content: space-between;  /* Espace entre les éléments */
-  gap: 20px;                 /* Espace entre chaque vidéo ou image */
-}
-
-/* Conteneur des vidéos */
-.service-videos {
-  display: flex;
-  justify-content: space-between;
-  width: 100%; /* S'assure que les vidéos prennent toute la largeur disponible */
-  gap: 20px;
 }
 
 .footer-second {
@@ -433,4 +417,12 @@ footer {
 footer p {
   font-size: 14px;
   color: black;
+}
+
+/* Ajout des pages vides */
+.empty-left, .empty-right {
+  width: 15%; /* Largeur de chaque section vide */
+  background-color: #e0e0e0; /* Couleur d'arrière-plan pour les sections vides */
+  height: 50vh; /* Hauteur similaire aux images de droite et de gauche */
+  margin-top: 10px;
 }

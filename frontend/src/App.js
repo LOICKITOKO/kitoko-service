@@ -2,13 +2,8 @@ import React, { useState } from 'react';
 import './App.css';
 import Cookies from 'js-cookie';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import videoD from './videos/videoD.mp4'; // Vidéo d'arrière-plan
-import videoA from './videos/videoA.mp4';
-import videoB from './videos/videoB.mp4';
-import videoC from './videos/videoC.mp4';
-import videoE from './videos/videoE.mp4'; // Vidéo ajoutée pour nettoyage hôtelier
 import logo from './videos/logo.png';
-import CleaningTips from './pages/CleaningTips'; // Import du composant CleaningTips
+import CleaningTips from './pages/CleaningTips';
 import GeneralInfo from './pages/GeneralInfo';
 import AvisEtEvaluations from './pages/AvisEtEvaluations';
 import FAQ from './pages/FAQ';
@@ -16,9 +11,10 @@ import PersonnelQualifie from './pages/PersonnelQualifie';
 import SansEngagement from './pages/SansEngagement';
 import DemandeEmploye from './pages/DemandeEmploye';
 import image1 from './videos/image1.png';
-import image2 from './videos/image2.png'; // Import de l'image 2
-import image3 from './videos/image3.png'; // Import de l'image 3
-import image4 from './videos/image4.png'; // Import de l'image 4
+import image2 from './videos/image2.png';
+import image3 from './videos/image3.png';
+import image4 from './videos/image4.png';
+import image5 from './videos/image5.png';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -26,22 +22,20 @@ function App() {
     email: '',
     phone: '',
     message: '',
-    address: '', // Nouveau champ
-    companyOrIndividual: '', // Choix entreprise ou particulier
-    companyOrIndividualName: '', // Nom de l'entreprise ou du particulier
-    gender: '', // Nouveau champ pour le sexe de l'employé
-    desiredDate: '', // Nouveau champ pour la date souhaitée pour la venue
+    address: '',
+    companyOrIndividual: '',
+    companyOrIndividualName: '',
+    gender: '',
+    desiredDate: '',
   });
 
   const csrftoken = Cookies.get('csrftoken');
 
-  // Gestion des changements dans le formulaire
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Gestion de l'envoi du formulaire
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -50,7 +44,7 @@ function App() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-CSRFToken': csrftoken, // Inclut le token CSRF
+          'X-CSRFToken': csrftoken,
         },
         body: JSON.stringify(formData),
       });
@@ -71,150 +65,131 @@ function App() {
   return (
     <Router>
       <div className="app-container">
-        {/* Navbar */}
         <nav className="navbar">
           <div className="navbar-links">
             <Link to="/" className="navbar-link">Accueil</Link>
             <Link to="/contact" className="navbar-link">Contact</Link>
             <Link to="/a-propos" className="navbar-link">À propos</Link>
-	    <Link to="/nos-tarifs" className="navbar-link">Nos Tarifs</Link>
+            <Link to="/nos-tarifs" className="navbar-link">Nos Tarifs</Link>
           </div>
         </nav>
 
-        {/* Routes */}
         <Routes>
-          {/* Page d'Accueil */}
           <Route path="/" element={
             <div className="home">
               <header className="header">
-                {/* Vidéo d'arrière-plan */}
-                <video className="background-video" autoPlay loop muted>
-                  <source src={videoD} type="video/mp4" />
-                  Votre navigateur ne supporte pas les vidéos HTML5.
-                </video>
-                {/* Contenu au-dessus de la vidéo */}
                 <div className="header-content">
-                                    <img src={logo} alt="KITOKO-SERVICE Logo" className="logo" />
+                  <img src={logo} alt="KITOKO-SERVICE Logo" className="logo" />
                   <p>Des solutions de nettoyage adaptées à vos besoins.</p>
                   <Link to="/demander-devis" className="cta-button">Demander un devis gratuit maintenant</Link>
                 </div>
               </header>
 
-              {/* Section des services */}
-		  <section className="services-overview">
-		  <h2>Aperçu de nos services</h2>
-		  <div className="services-icons">
-		  <div className="service">
-		  <p>Nettoyage de bureaux</p>
-            <video controls className="service-video">
-              <source src={videoA} type="video/mp4" />
-              Votre navigateur ne prend pas en charge les vidéos HTML5.
-            </video>
-            <img src={image1} alt="Nettoyage de bureaux" className="service-image" />
-          </div>
-          <div className="service">
-            <p>Entretien ménager</p>
-            <video controls className="service-video">
-              <source src={videoB} type="video/mp4" />
-              Votre navigateur ne prend pas en charge les vidéos HTML5.
-            </video>
-            <img src={image2} alt="Entretien ménager" className="service-image" />
-          </div>
-          <div className="service">
-            <p>Nettoyage industriel</p>
-            <video controls className="service-video">
-              <source src={videoC} type="video/mp4" />
-              Votre navigateur ne prend pas en charge les vidéos HTML5.
-            </video>
-            <img src={image3} alt="Nettoyage industriel" className="service-image" />
-          </div>
-          <div className="service">
-            <p>Nettoyage hôtelier</p>
-            <video controls className="service-video">
-              <source src={videoE} type="video/mp4" />
-              Votre navigateur ne prend pas en charge les vidéos HTML5.
-            </video>
-            <img src={image4} alt="Nettoyage hôtelier" className="service-image" />
-          </div>
-        </div>
-      </section>
+		  <section className="service-line">
+  <div className="service-image-container">
+    <img src={image1} alt="Service Image" className="service-image" />
+  </div>
+  <div className="blue-page"></div> {/* Page bleue à droite */}
+</section>
+
+<section className="service-line reverse">
+  <div className="blue-page"></div> {/* Page bleue à gauche */}
+  <div className="service-image-container">
+    <img src={image2} alt="Service Image" className="service-image" />
+  </div>
+</section>
+
+<section className="service-line">
+  <div className="service-image-container">
+    <img src={image3} alt="Service Image" className="service-image" />
+  </div>
+  <div className="blue-page"></div> {/* Page bleue à droite */}
+</section>
+
+<section className="service-line reverse">
+  <div className="blue-page"></div> {/* Page bleue à gauche */}
+  <div className="service-image-container">
+    <img src={image4} alt="Service Image" className="service-image" />
+  </div>
+</section>
+
+<section className="service-line">
+  <div className="service-image-container">
+    <img src={image5} alt="Service Image" className="service-image" />
+  </div>
+  <div className="blue-page"></div> {/* Page bleue à droite */}
+</section>
             </div>
           } />
 
-          {/* Page Demander un devis */}
-	  <Route path="/demander-devis" element={
-  <div className="quote-request">
-    <h1>Demandez un devis gratuit</h1>
-    <p>Nous vous contacterons dans les plus brefs délais pour discuter de vos besoins de nettoyage.</p>
+          <Route path="/demander-devis" element={
+            <div className="quote-request">
+              <h1>Demandez un devis gratuit</h1>
+              <p>Nous vous contacterons dans les plus brefs délais pour discuter de vos besoins de nettoyage.</p>
 
-    <form onSubmit={handleSubmit} className="quote-form">
-      <input
-        type="text"
-        name="name"
-        placeholder="Nom"
-        value={formData.name}
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="tel"
-        name="phone"
-        placeholder="Téléphone"
-        value={formData.phone}
-        onChange={handleChange}
-        required
-      />
+              <form onSubmit={handleSubmit} className="quote-form">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Nom"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Téléphone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="text"
+                  name="address"
+                  placeholder="Adresse"
+                  value={formData.address}
+                  onChange={handleChange}
+                  required
+                />
+                <select
+                  name="companyOrIndividual"
+                  value={formData.companyOrIndividual}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Choisissez Entreprise ou Particulier</option>
+                  <option value="Entreprise">Entreprise</option>
+                  <option value="Particulier">Particulier</option>
+                </select>
+                <input
+                  type="text"
+                  name="companyOrIndividualName"
+                  placeholder="Nom de l'entreprise ou du particulier"
+                  value={formData.companyOrIndividualName}
+                  onChange={handleChange}
+                  required
+                />
+                <textarea
+                  name="message"
+                  placeholder="Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                ></textarea>
+                <button type="submit">Envoyer la demande</button>
+              </form>
+            </div>
+          } />
 
-      {/* Champs supplémentaires */}
-      <input
-        type="text"
-        name="address"
-        placeholder="Adresse"
-        value={formData.address}
-        onChange={handleChange}
-        required
-      />
-      <select
-        name="companyOrIndividual"
-        value={formData.companyOrIndividual}
-        onChange={handleChange}
-        required
-      >
-        <option value="">Choisissez Entreprise ou Particulier</option>
-        <option value="Entreprise">Entreprise</option>
-        <option value="Particulier">Particulier</option>
-      </select>
-      <input
-        type="text"
-        name="companyOrIndividualName"
-        placeholder="Nom de l'entreprise ou du particulier"
-        value={formData.companyOrIndividualName}
-        onChange={handleChange}
-        required
-      />
-
-	<textarea
-        name="message"
-        placeholder="Message"
-        value={formData.message}
-        onChange={handleChange}
-        required
-      ></textarea>
-
-      <button type="submit">Envoyer la demande</button>
-    </form>
-  </div>
-} />
-
-	{/* Page Demander un employé */}
           <Route path="/demande-employe" element={
             <div className="employee-request">
               <h1>Demander un(e) employé(e)</h1>
@@ -245,8 +220,6 @@ function App() {
                   onChange={handleChange}
                   required
                 />
-
-                {/* Champs supplémentaires */}
                 <input
                   type="text"
                   name="address"
@@ -255,8 +228,6 @@ function App() {
                   onChange={handleChange}
                   required
                 />
-
-		  {/* Nouveau champ pour le sexe de l'employé */}
                 <select
                   name="gender"
                   value={formData.gender}
@@ -266,10 +237,8 @@ function App() {
                   <option value="">Choisissez le sexe de l'employé</option>
                   <option value="Homme">Homme</option>
                   <option value="Femme">Femme</option>
-		  <option value="Indifféré">Indifféré</option> {/* Nouvelle option */}
+                  <option value="Indifféré">Indifféré</option>
                 </select>
-
-                {/* Nouveau champ pour la date souhaitée pour la venue */}
                 <input
                   type="date"
                   name="desiredDate"
@@ -277,7 +246,6 @@ function App() {
                   onChange={handleChange}
                   required
                 />
-
                 <select
                   name="companyOrIndividual"
                   value={formData.companyOrIndividual}
@@ -296,13 +264,11 @@ function App() {
                   onChange={handleChange}
                   required
                 />
-
                 <button type="submit">Envoyer la demande</button>
               </form>
             </div>
           } />
 
-          {/* Page Contact */}
           <Route path="/contact" element={
             <div className="contact-page">
               <h1>Contactez-nous</h1>
@@ -312,7 +278,6 @@ function App() {
             </div>
           } />
 
-          {/* Page À propos */}
           <Route path="/a-propos" element={
             <div className="about-page">
               <h1>À propos de KITOKO-SERVICE</h1>
@@ -323,7 +288,6 @@ function App() {
             </div>
           } />
 
-	  {/* Page Nos Tarifs */}
           <Route path="/nos-tarifs" element={
             <div className="pricing-page">
               <h1>Nos Tarifs</h1>
@@ -340,7 +304,7 @@ function App() {
             </div>
           } />
 
-          {/* Page Conseils de nettoyage */}
+	  {/* Page Conseils de nettoyage */}
           <Route path="/conseils-de-nettoyage" element={<CleaningTips />} />
 	  <Route path="/informations-generales" element={<GeneralInfo />} />
 	  <Route path="/avis-et-evaluations" element={<AvisEtEvaluations />} />
@@ -360,7 +324,7 @@ function App() {
     <Link to="/personnel-qualifie" className="footer-link">
       <p>Personnel qualifié</p>
     </Link>
-    
+
     {/* Cercle avec X */}
     <div className="footer-second-alt-circle">
       <span role="img" aria-label="X">❌</span>
@@ -368,7 +332,7 @@ function App() {
     <Link to="/sans-engagement" className="footer-link">
       <p>Sans engagement</p>
     </Link>
-    
+
     {/* Cercle avec Yes */}
     <div className="footer-second-alt-circle">
       <span role="img" aria-label="Yes">📋</span>
