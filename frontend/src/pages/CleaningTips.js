@@ -67,6 +67,22 @@ const CleaningTips = () => {
           <li>Utilisez des désodorisants pour garantir une atmosphère agréable.</li>
         </ul>
       </div>
+
+      {/* Catégorie : Nettoyage de magasins */}
+      <div className="cleaning-category">
+        <h2>Nettoyage de magasins</h2>
+        <span className="floating-icon">🛒</span>
+        <span className="floating-icon">✨</span>
+        <span className="floating-icon">🧼</span>
+        <ul>
+          <li>Nettoyez et désinfectez régulièrement les zones à fort passage comme les caisses et les poignées de porte.</li>
+          <li>Maintenez les vitrines propres pour une présentation attrayante des produits.</li>
+          <li>Vérifiez et nettoyez fréquemment les rayons pour éviter l’accumulation de poussière.</li>
+          <li>Entretenez les sols en les aspirant et en les lavant plusieurs fois par jour si nécessaire.</li>
+          <li>Assurez un stockage propre et organisé des produits pour éviter la contamination.</li>
+          <li>Utilisez des désodorisants pour maintenir une ambiance agréable pour les clients.</li>
+        </ul>
+      </div>
     </div>
   );
 };

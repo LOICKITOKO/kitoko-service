@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Cookies from 'js-cookie';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import OffresVenir from './pages/OffresVenir';
 import CleaningTips from './pages/CleaningTips';
 import GeneralInfo from './pages/GeneralInfo';
 import AvisEtEvaluations from './pages/AvisEtEvaluations';
@@ -14,6 +15,7 @@ import image2 from './videos/image2.png';
 import image3 from './videos/image3.png';
 import image4 from './videos/image4.png';
 import image5 from './videos/image5.png';
+import image6 from './videos/image6.png';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -212,7 +214,7 @@ function App() {
         <img src={image5} alt="Nettoyage magasin" />
       </div>
       <div className="service-content">
-        <h2>Pourquoi choisir notre service de nettoyage pour magasins ?</h2>
+        <h2>Pourquoi choisir notre service de nettoyage pour magasin et super-marché ?</h2>
         <div className="cleaning-arguments">
           <div className="argument">
             <h3>Attractivité accrue :</h3>
@@ -235,6 +237,35 @@ function App() {
       </div>
     </div>
   </section>
+</section>
+
+		  {/* Section vente de produits de nettoyage */}
+<section className="store-cleaning-services">
+  <div className="service-container">
+    <div className="service-image">
+      <img src={image6} alt="Produits de nettoyage" />
+    </div>
+    <div className="service-content">
+      <h2>Vente des produits de Nettoyage, Pourquoi chez nous ?</h2>
+      <div className="cleaning-arguments">
+        <div className="argument">
+          <h3>Qualité et efficacité :</h3>
+              <p>Nous offrons une large gamme de solutions de nettoyage adaptées aux particuliers et aux professionnels, alliant performance et respect de l’environnement.</p>
+        </div>
+        <div className="argument">
+          <h3>Solutions adaptées à tous les besoins :</h3>
+          <p>Que ce soit pour des bureaux, commerces ou domiciles, nous avons les solutions idéales pour chaque situation.</p>
+        </div>
+      </div>
+      <h2>Ce que nous proposons :</h2>
+      <ul className="services-list">
+        <li>Une sélection variée de produits de nettoyage</li>
+        <li>Des solutions adaptées aux surfaces professionnelles et domestiques</li>
+        <li>Des produits sûrs et performants pour un entretien efficace</li>
+        <li>Des conseils personnalisés pour vous aider à choisir le bon produit</li>
+      </ul>
+    </div>
+  </div>
 </section>
 		  </div>
           } />
@@ -405,16 +436,17 @@ function App() {
             </div>
           } />
 
+          {/* Page nos tarifs */}
           <Route path="/nos-tarifs" element={
             <div className="pricing-page">
               <h1>Nos Tarifs</h1>
               <div className="pricing">
-                <h2>Nos Tarifs</h2>
                 <ul>
                   <li>Nettoyage de bureaux : Mensuel / Sur devis , 25€ / Passage</li>
                   <li>Entretien ménager : 50€ / visite</li>
                   <li>Nettoyage industriel : Mensuel / Sur devis , 150€ / Intervention</li>
                   <li>Nettoyage hôtelier : Sur devis</li>
+		  <li>Nettoyage magasin, super-marché : Sur devis</li>
                 </ul>
                 <p>Contactez-nous pour un devis personnalisé adapté à vos besoins !</p>
               </div>
@@ -429,6 +461,7 @@ function App() {
 	  <Route path="/personnel-qualifie" element={<PersonnelQualifie />} />
           <Route path="/sans-engagement" element={<SansEngagement />} />
           <Route path="/demande-employe" element={<DemandeEmploye />} />
+	  <Route path="/offres-venir" element={<OffresVenir />} />
         </Routes>
 
 	  {/* Nouveau Footer avant l'existant */}
@@ -468,7 +501,7 @@ function App() {
               <h3>Blog ou Actualités</h3>
               <ul>
                 <li>
-                  <button onClick={() => alert('Offres à venir')} className="link-button">Offres à venir</button>
+                  <Link to="/offres-venir" className="link-button">Offres à venir</Link>
                 </li>
 	           <li>
                    <Link to="/conseils-de-nettoyage" className="link-button">Conseils de nettoyage</Link>
