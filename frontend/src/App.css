@@ -90,10 +90,17 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour le mouvement et l'ombre */
 }
 
+/* Effet de survol pour les boutons */
 .cta-button:hover {
   background-color: #ff9900;
   transform: translateY(-5px); /* Légère translation vers le haut lors du survol */
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus marquée pour donner l'impression de flottement */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Effet de survol pour les éléments de service */
+.service:hover {
+  transform: scale(1.05); /* Agrandissement de l'élément */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
 }
 
 .services-overview {
@@ -202,10 +209,22 @@ form button {
   justify-content: center;
 }
 
+/* Effet de survol pour les images */
 .service-image img {
   width: 100%;
   height: auto;
-  margin-right: 600px;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* Effet cassant et zoom lors du survol */
+.service-image img:hover {
+  transform: scale(1.1) rotate(5deg); /* Légère rotation pour effet cassant */
+  filter: brightness(0.8); /* Légère réduction de la luminosité */
+}
+
+/* Effet pour les images dans la page bleue */
+.blue-page .service-image img:hover {
+  transform: scale(1.1) rotate(-5deg); /* Inverse la rotation pour créer un contraste */
 }
 
 .service-image {
