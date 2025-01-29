@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import OffresVenir from './pages/OffresVenir';
 import CleaningTips from './pages/CleaningTips';
 import GeneralInfo from './pages/GeneralInfo';
+import Testimonials from './pages/Testimonials';
 import AvisEtEvaluations from './pages/AvisEtEvaluations';
 import FAQ from './pages/FAQ';
 import PersonnelQualifie from './pages/PersonnelQualifie';
@@ -30,7 +31,7 @@ function App() {
     desiredDate: '',
   });
 
-  const csrftoken = Cookies.get('csrftoken');
+const csrftoken = Cookies.get('csrftoken');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -462,6 +463,7 @@ function App() {
           <Route path="/sans-engagement" element={<SansEngagement />} />
           <Route path="/demande-employe" element={<DemandeEmploye />} />
 	  <Route path="/offres-venir" element={<OffresVenir />} />
+	  <Route path="/Testimonials" element={<Testimonials />} />
         </Routes>
 
 	  {/* Nouveau Footer avant l'existant */}
@@ -514,7 +516,7 @@ function App() {
               <h3>Témoignages Clients</h3>
               <ul>
                 <li>
-                  <button onClick={() => alert('Ce que disent nos clients')} className="link-button">Ce que disent nos clients</button>
+                   <Link to="/Testimonials" className="link-button">Testimonials</Link>
                 </li>
 	           <li>
                    <Link to="/avis-et-evaluations" className="link-button">Avis et évaluations</Link>

@@ -1,0 +1,118 @@
+/* Styles pour la page Témoignages Clients */
+.testimonials-container {
+    text-align: center;
+    padding: 50px;
+    background-color: #ffffff; /* Fond blanc pour le conteneur principal */
+    font-family: 'Arial', sans-serif; /* Police générale */
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #0066cc; /* Couleur bleue pour le titre */
+    font-weight: bold;
+}
+
+/* Mosaïque de témoignages */
+.testimonial-mosaic {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 témoignages visibles à la fois */
+    gap: 20px;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden; /* Cache les témoignages hors de la grille */
+}
+
+/* Carte de chaque témoignage */
+.testimonial-card {
+    background: #0066cc; /* Bleu clair pour l'arrière-plan de la carte */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: white; /* Texte en blanc pour un bon contraste */
+    text-align: center;
+    opacity: 0.8; /* Un peu transparent pour l'effet de cassure */
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* Témoignage actif : effectue un zoom dynamique et légèrement cassé */
+.testimonial-card.active {
+    opacity: 1;
+    transform: scale(1.2) rotate(3deg); /* Zoom léger avec une rotation pour un effet cassant */
+}
+
+/* Témoignage inactif : légère réduction et rotation */
+.testimonial-card:not(.active) {
+    opacity: 0.6;
+    transform: scale(0.9) rotate(-3deg); /* Réduit la taille et tourne légèrement pour l'effet cassant */
+}
+
+/* Animation de défilement du témoignage */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateX(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animation de vibrations (mouvement cassant) */
+@keyframes shakeEffect {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
+}
+
+/* Appliquer l'animation de vibration aux cartes lors de l'activation */
+.testimonial-card.active {
+    animation: shakeEffect 0.5s ease-in-out; /* Vibration au changement de carte */
+}
+
+/* Animation de zoom automatique sur les témoignages */
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1); /* Démarre à la taille normale */
+    }
+    50% {
+        transform: scale(1.1); /* Zoom léger à 1.1 */
+    }
+    100% {
+        transform: scale(1); /* Retour à la taille normale */
+    }
+}
+
+/* Appliquer l'animation de zoom automatique sur toutes les cartes */
+.testimonial-card {
+    animation: zoomInOut 5s infinite ease-in-out; /* Zoom automatique tous les 5 secondes */
+}
+
+/* Responsive Design pour les petites tailles d'écran */
+@media (max-width: 768px) {
+    .testimonials-container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .testimonial-mosaic {
+        grid-template-columns: repeat(2, 1fr); /* 2 témoignages visibles sur mobile */
+    }
+
+    .testimonial-card {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
