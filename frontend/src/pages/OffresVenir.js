@@ -1,18 +1,19 @@
 import React from 'react';
-import './OffresVenir.css';
+import { Link } from 'react-router-dom'; // Assurez-vous d'importer Link
+import './OffresVenir.css'; // Si vous avez un fichier CSS spécifique pour cette page
 
-const UpcomingOffers = () => {
+const OffresVenir = () => {
   return (
-    <div className="upcoming-offers-page">
+    <div className="offres-venir">
       <h1>Offres à Venir</h1>
       
       {/* Section : Promotions sur les Produits de Nettoyage */}
       <div className="offer-category">
         <h2>Promotions sur les Produits de Nettoyage</h2>
         <ul>
-          <li>Réductions sur les détergents et désinfectants professionnels.</li>
-          <li>Packs éco-responsables à prix réduit.</li>
-          <li>Offres spéciales sur les aspirateurs et équipements de nettoyage.</li>
+          <li><Link to="/Offres1">Réductions sur les détergents et désinfectants professionnels.</Link></li>
+          <li><Link to="/Offres2">Packs éco-responsables à prix réduit.</Link></li>
+          <li><Link to="/Offres3">Offres spéciales sur les aspirateurs et équipements de nettoyage.</Link></li>
         </ul>
       </div>
       
@@ -20,9 +21,9 @@ const UpcomingOffers = () => {
       <div className="offer-category">
         <h2>Services de Nettoyage en Promotion</h2>
         <ul>
-          <li>Offre spéciale pour les nouveaux clients : -20% sur la première prestation.</li>
-          <li>Réduction sur les abonnements mensuels de nettoyage régulier.</li>
-          <li>Nettoyage gratuit d’une zone spécifique pour tester nos services.</li>
+          <li><Link to="/Offres4">Offre spéciale pour les nouveaux clients : -20% sur la première prestation.</Link></li>
+          <li><Link to="/Offres5">Réduction sur les abonnements mensuels de nettoyage régulier.</Link></li>
+          <li><Link to="/Offres6">Nettoyage gratuit d’une zone spécifique pour tester nos services.</Link></li>
         </ul>
       </div>
       
@@ -30,13 +31,13 @@ const UpcomingOffers = () => {
       <div className="offer-category">
         <h2>Programme de Fidélité</h2>
         <ul>
-          <li>Gagnez des points à chaque prestation et échangez-les contre des réductions.</li>
-          <li>Offres exclusives pour les clients réguliers.</li>
-          <li>Bonus et cadeaux pour les membres VIP.</li>
+          <li><Link to="/Offres7">Gagnez des points à chaque prestation et échangez-les contre des réductions.</Link></li>
+          <li><Link to="/Offres8">Offres exclusives pour les clients réguliers.</Link></li>
+          <li><Link to="/Offres9">Bonus et cadeaux pour les membres VIP.</Link></li>
         </ul>
       </div>
     </div>
   );
 };
 
-export default UpcomingOffers;
+export default OffresVenir;

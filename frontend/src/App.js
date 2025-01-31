@@ -17,6 +17,16 @@ import image3 from './videos/image3.png';
 import image4 from './videos/image4.png';
 import image5 from './videos/image5.png';
 import image6 from './videos/image6.png';
+import Offres1 from './pages/OffresPages/Offres1';
+import Offres2 from './pages/OffresPages/Offres2';
+import Offres3 from './pages/OffresPages/Offres3';
+import Offres4 from './pages/OffresPages/Offres4';
+import Offres5 from './pages/OffresPages/Offres5';
+import Offres6 from './pages/OffresPages/Offres6';
+import Offres7 from './pages/OffresPages/Offres7';
+import Offres8 from './pages/OffresPages/Offres8';
+import Offres9 from './pages/OffresPages/Offres9';
+
 
 function App() {
   const [formData, setFormData] = useState({
@@ -385,6 +395,16 @@ const csrftoken = Cookies.get('csrftoken');
           <Route path="/demande-employe" element={<DemandeEmploye />} />
 	  <Route path="/offres-venir" element={<OffresVenir />} />
 	  <Route path="/Testimonials" element={<Testimonials />} />
+        <Route path="/" element={<OffresVenir />} />
+        <Route path="/Offres1" element={<Offres1 />} />
+        <Route path="/Offres2" element={<Offres2 />} />
+        <Route path="/Offres3" element={<Offres3 />} />
+        <Route path="/Offres4" element={<Offres4 />} />
+        <Route path="/Offres5" element={<Offres5 />} />
+        <Route path="/Offres6" element={<Offres6 />} />
+        <Route path="/Offres7" element={<Offres7 />} />
+        <Route path="/Offres8" element={<Offres8 />} />
+        <Route path="/Offres9" element={<Offres9 />} />
         </Routes>
 
 	  {/* Nouveau Footer avant l'existant */}
