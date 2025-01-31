@@ -48,6 +48,39 @@ function DemandeEmploye() {
           />
         </div>
 
+	  <div>
+	  <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div>
+	  <input
+            type="tel"
+            name="phone"
+            placeholder="Téléphone"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+          />
+	</div>
+
+        <div>
+	  <input
+            type="text"
+            name="address"
+            placeholder="Adresse"
+            value={formData.address}
+            onChange={handleChange}
+            required
+          />
+	</div>
+
         <div>
           <label htmlFor="sexe">Sexe de l'employé(e) :</label>
           <select
@@ -75,6 +108,30 @@ function DemandeEmploye() {
             required
           />
         </div>
+
+        <div>
+	  <select
+                  name="companyOrIndividual"
+                  value={formData.companyOrIndividual}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Choisissez Entreprise ou Particulier</option>
+                  <option value="Entreprise">Entreprise</option>
+                  <option value="Particulier">Particulier</option>
+                </select>
+	       </div>
+
+	<div>
+	  <input
+            type="text"
+            name="companyOrIndividualName"
+            placeholder="Nom Entreprise ou Particulier"
+            value={formData.companyOrIndividualName}
+            onChange={handleChange}
+            required
+           />
+         </div>
 
         <button type="submit">Envoyer la demande</button>
       </form>

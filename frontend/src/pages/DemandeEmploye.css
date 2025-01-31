@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f1f1f1;
+  background-color: #f1f1f1; /* Fond gris clair */
   margin: 0;
   padding: 0;
 }
@@ -28,23 +28,27 @@ form {
   align-items: center;
   max-width: 500px;
   margin: 20px auto;
-  background-color: #fff;
+  background-color: #0066cc; /* Cadre du formulaire en bleu */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 form input, form select {
+  width: 100%; /* Même largeur */
+  height: 50px; /* Même hauteur */
   padding: 10px;
-  margin: 10px 0;
-  width: 100%;
+  margin: 10px 9;
   border: 1px solid #ccc;
   border-radius: 4px;
+  box-sizing: border-box; /* Évite les débordements */
+  font-size: 16px;
+  background-color: white; /* Fond blanc des champs */
 }
 
 form button {
   padding: 10px 20px;
-  background-color: #0066cc;;
+  background-color: #2ecc71;
   color: white;
   border: none;
   border-radius: 4px;
@@ -59,7 +63,7 @@ form button:hover {
 
 label {
   font-size: 16px;
-  color: #2c3e50;
+  color: #ffffff; /* Texte en blanc pour contraste */
 }
 
 .container {
