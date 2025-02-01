@@ -26,6 +26,16 @@ import Offres6 from './pages/OffresPages/Offres6';
 import Offres7 from './pages/OffresPages/Offres7';
 import Offres8 from './pages/OffresPages/Offres8';
 import Offres9 from './pages/OffresPages/Offres9';
+import CleaningBureaux from './pages/CleaningBureaux';
+import CleaningResidentiel from './pages/CleaningResidentiel';
+import CleaningIndustriel from './pages/CleaningIndustriel';
+import CleaningHotelier from './pages/CleaningHotelier';
+import CleaningMagasin from './pages/CleaningMagasin';
+import imageA from './videos/imageA.png';
+import imageB from './videos/imageB.png';
+import imageC from './videos/imageC.png';
+import imageD from './videos/imageD.png';
+import imageE from './videos/imageE.png';
 
 
 function App() {
@@ -387,6 +397,7 @@ const csrftoken = Cookies.get('csrftoken');
 
 	  {/* Page Conseils de nettoyage */}
           <Route path="/conseils-de-nettoyage" element={<CleaningTips />} />
+	  <Route path="/" element={<CleaningTips />} />
 	  <Route path="/informations-generales" element={<GeneralInfo />} />
 	  <Route path="/avis-et-evaluations" element={<AvisEtEvaluations />} />
 	  <Route path="/faq" element={<FAQ />} />
@@ -405,6 +416,11 @@ const csrftoken = Cookies.get('csrftoken');
         <Route path="/Offres7" element={<Offres7 />} />
         <Route path="/Offres8" element={<Offres8 />} />
         <Route path="/Offres9" element={<Offres9 />} />
+	<Route path="/cleaning-bureaux" element={<CleaningBureaux image={imageA} />} />
+        <Route path="/cleaning-residentiel" element={<CleaningResidentiel image={imageB} />} />
+        <Route path="/cleaning-industriel" element={<CleaningIndustriel image={imageC} />} />
+        <Route path="/cleaning-hotelier" element={<CleaningHotelier image={imageD} />} />
+        <Route path="/cleaning-magasin" element={<CleaningMagasin image={imageE} />} />
         </Routes>
 
 	  {/* Nouveau Footer avant l'existant */}

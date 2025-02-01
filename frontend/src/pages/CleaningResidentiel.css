@@ -1,0 +1,126 @@
+.cleaning-container {
+  display: flex;
+  align-items: center; /* Centre le texte et l'image verticalement */
+  justify-content: space-between; /* Répartit le texte et l’image sur la page */
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.cleaning-title {
+  font-size: 3rem; /* Augmenter la taille du titre */
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.cleaning-description {
+  font-size: 1.5rem; /* Augmenter la taille de la description */
+  line-height: 1.8; /* Espacement entre les lignes */
+  color: #555;
+}
+
+/* Image plus grande et mieux ajustée */
+.cleaning-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Aligne bien l'image à droite */
+  align-items: center;
+}
+
+/* Liste ajustée */
+.cleaning-text ul {
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+.cleaning-text li {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.cleaning-image {
+  display: block;
+  width: 100%;
+  max-width: 900px; /* Augmenter la taille maximale de l'image */
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.cleaning-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🟢 RESPONSIVE : Sur écran plus petit, on garde l'image à droite */
+@media (max-width: 900px) {
+  .cleaning-container {
+    flex-direction: row; /* On garde le texte à gauche et l'image à droite */
+    flex-wrap: wrap; /* Évite que le texte passe au-dessus */
+  }
+
+  /* Ajuster les tailles de texte et d'image pour une meilleure lisibilité sur petits écrans */
+  .cleaning-text {
+    max-width: 100%;
+    font-size: 1.6rem; /* Réduire la taille du texte */
+  }
+
+  .cleaning-title {
+    font-size: 2.5rem; /* Réduire le titre */
+  }
+
+  .cleaning-description {
+    font-size: 1.3rem; /* Réduire la description */
+  }
+
+  .cleaning-image-container {
+    max-width: 100%;
+  }
+
+  .cleaning-image {
+    max-width: 90%; /* Pour éviter que l'image soit trop grande sur mobile */
+  }
+}
+
+@media (max-width: 600px) {
+  .cleaning-container {
+    flex-direction: column;
+  }
+
+  .cleaning-text {
+    max-width: 100%;
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .cleaning-image-container {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .cleaning-image {
+    max-width: 90%; /* Taille encore plus réduite sur petits écrans */
+  }
+
+  .cleaning-title {
+    font-size: 2rem; /* Réduire encore la taille du titre */
+  }
+
+  .cleaning-description {
+    font-size: 1.2rem; /* Réduire encore la taille de la description */
+  }
+}
