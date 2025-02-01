@@ -22,6 +22,7 @@ const GeneralInfo = () => {
             <li>Nettoyage résidentiel : pour un intérieur confortable et impeccable.</li>
             <li>Nettoyage industriel : entretien des zones de production et équipements techniques.</li>
             <li>Nettoyage hôtelier : service irréprochable pour chambres et espaces communs.</li>
+	    <li>Nettoyage de magasin : pour un espace de vente attrayant et hygiénique.</li>
 	    <li>Nous mettons à votre disposition des employé(e)s qualifié(e)s, aussi bien pour les particuliers que pour les entreprises.</li>
           </ul>
         </div>
