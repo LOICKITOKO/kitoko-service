@@ -56,7 +56,6 @@ textarea {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 5px;
   resize: none;
   margin-bottom: 20px;
   opacity: 0;
@@ -118,6 +117,7 @@ ul li {
   font-size: 16px;
   line-height: 1.5;
   opacity: 0;
+  border-radius: 30px;
   transform: translateY(20px);
   animation: fadeInUp 0.8s ease-out forwards; /* Animation d'apparition des avis */
   transition: transform 0.3s ease-in-out;

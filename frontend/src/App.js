@@ -430,25 +430,31 @@ const csrftoken = Cookies.get('csrftoken');
     <div className="footer-second-alt-circle">
       <span role="img" aria-label="salutation">✅</span>
     </div>
-    <Link to="/personnel-qualifie" className="footer-link">
-      <p>Personnel qualifié</p>
-    </Link>
+     <ul>
+       <li>
+         <Link to="/personnel-qualifie" className="footer-link">>Personnel qualifié</Link>
+       </li>
+     </ul>
 
     {/* Cercle avec X */}
     <div className="footer-second-alt-circle">
       <span role="img" aria-label="X">❌</span>
     </div>
-    <Link to="/sans-engagement" className="footer-link">
-      <p>Sans engagement</p>
-    </Link>
+      <ul>
+	<li>
+          <Link to="/sans-engagement" className="footer-link">>Sans engagement</Link>
+	</li>
+      </ul>
 
     {/* Cercle avec Yes */}
     <div className="footer-second-alt-circle">
       <span role="img" aria-label="Yes">📋</span>
     </div>
-    <Link to="/demande-employe" className="footer-link">
-      <p>Demandez un(e) employé(e)</p>
-    </Link>
+     <ul>
+       <li>
+    <Link to="/demande-employe" className="footer-link">>Demandez un(e) employé(e)</Link>
+       </li>
+     </ul>
   </div>
 </div>
 
@@ -460,10 +466,10 @@ const csrftoken = Cookies.get('csrftoken');
               <h3>Blog ou Actualités</h3>
               <ul>
                 <li>
-                  <Link to="/offres-venir" className="link-button">Offres à venir</Link>
+                  <Link to="/offres-venir" className="link-button">>Offres à venir</Link>
                 </li>
 	           <li>
-                   <Link to="/conseils-de-nettoyage" className="link-button">Conseils de nettoyage</Link>
+                   <Link to="/conseils-de-nettoyage" className="link-button">>Conseils de nettoyage</Link>
                    </li>
                  </ul>
             </div>
@@ -473,10 +479,10 @@ const csrftoken = Cookies.get('csrftoken');
               <h3>Témoignages Clients</h3>
               <ul>
                 <li>
-                   <Link to="/Testimonials" className="link-button">Testimonials</Link>
+                   <Link to="/Testimonials" className="link-button">>Testimonials</Link>
                 </li>
 	           <li>
-                   <Link to="/avis-et-evaluations" className="link-button">Avis et évaluations</Link>
+                   <Link to="/avis-et-evaluations" className="link-button">>Avis et évaluations</Link>
                    </li>
                  </ul>
             </div>
@@ -486,10 +492,10 @@ const csrftoken = Cookies.get('csrftoken');
               <h3>FAQ</h3>
               <ul>
                 <li>
-                  <Link to="/faq" className="link-button">Questions Fréquentes</Link>
+                  <Link to="/faq" className="link-button">>Questions Fréquentes</Link>
                 </li>
 	           <li>
-                   <Link to="/informations-generales" className="link-button">Informations Générales</Link>
+                   <Link to="/informations-generales" className="link-button">>Informations Générales</Link>
                    </li>
                  </ul>
             </div>

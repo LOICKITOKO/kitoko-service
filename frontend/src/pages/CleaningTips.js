@@ -8,11 +8,23 @@ const CleaningTips = () => {
       <h1>Conseils de Nettoyage</h1>
 
       <div className="cleaning-list">
-        <Link to="/cleaning-bureaux" className="cleaning-link">Conseils nettoyage bureaux</Link>
-        <Link to="/cleaning-residentiel" className="cleaning-link">Conseils nettoyage résidentiel</Link>
-        <Link to="/cleaning-industriel" className="cleaning-link">Conseils nettoyage industriel</Link>
-        <Link to="/cleaning-hotelier" className="cleaning-link">Conseils nettoyage hôtelier</Link>
-        <Link to="/cleaning-magasin" className="cleaning-link">Conseils nettoyage magasin</Link>
+	  <ul>
+	    <li>
+              <Link to="/cleaning-bureaux" className="cleaning-link">Conseils nettoyage bureaux</Link>
+	    </li>
+	     <li>
+              <Link to="/cleaning-residentiel" className="cleaning-link">Conseils nettoyage résidentiel</Link>
+	     </li>
+	    <li>
+              <Link to="/cleaning-industriel" className="cleaning-link">Conseils nettoyage industriel</Link>
+	    </li>
+	    <li>
+              <Link to="/cleaning-hotelier" className="cleaning-link">Conseils nettoyage hôtelier</Link>
+	    </li>
+	    <li>
+              <Link to="/cleaning-magasin" className="cleaning-link">Conseils nettoyage magasin</Link>
+	    </li>
+	  </ul>
       </div>
     </div>
   );

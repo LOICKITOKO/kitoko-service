@@ -140,6 +140,7 @@ body {
   padding: 20px;
   box-sizing: border-box;
   font-family: emoji;
+  color: black;
 }
 
 .quote-request p {
@@ -314,6 +315,7 @@ p {
   padding: 10px;
   box-sizing: border-box;
   font-family: emoji;
+  color: black;
 }
 
 .contact-page p {
@@ -453,7 +455,6 @@ button.link-button:hover {
 .footer-second-alt-circle {
   width: 50px;
   height: 50px;
-  background-color: #ffffff;
   border-radius: 50%;
   display: flex;
   justify-content: center;
