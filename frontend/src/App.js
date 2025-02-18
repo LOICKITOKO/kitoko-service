@@ -17,6 +17,8 @@ import image3 from './videos/image3.png';
 import image4 from './videos/image4.png';
 import image5 from './videos/image5.png';
 import image6 from './videos/image6.png';
+import image7 from './videos/image7.png';
+import image8 from './videos/image8.png';
 import Offres1 from './pages/OffresPages/Offres1';
 import Offres2 from './pages/OffresPages/Offres2';
 import Offres3 from './pages/OffresPages/Offres3';
@@ -31,11 +33,17 @@ import CleaningResidentiel from './pages/CleaningResidentiel';
 import CleaningIndustriel from './pages/CleaningIndustriel';
 import CleaningHotelier from './pages/CleaningHotelier';
 import CleaningMagasin from './pages/CleaningMagasin';
+import CleaningRestaurant from './pages/CleaningRestaurant';
+import CleaningCabinet from './pages/CleaningCabinet';
 import imageA from './videos/imageA.png';
 import imageB from './videos/imageB.png';
 import imageC from './videos/imageC.png';
 import imageD from './videos/imageD.png';
 import imageE from './videos/imageE.png';
+import imageF from './videos/imageF.png';
+import imageG from './videos/imageG.png';
+import Temoignages from "./pages/Temoignages";
+import clientImage from "./videos/client1.png"; // Une image par défaut
 
 
 function App() {
@@ -260,6 +268,66 @@ const csrftoken = Cookies.get('csrftoken');
   </section>
 </section>
 
+		  {/* Section nettoyage des restaurants */}
+<section className="restaurant-cleaning-services">
+  <div className="service-container">
+    <div className="service-image">
+      <img src={image7} alt="Nettoyage de restaurant" />
+    </div>
+    <div className="service-content">
+      <h2>Pourquoi choisir notre service de nettoyage pour restaurants ?</h2>
+      <div className="cleaning-arguments">
+        <div className="argument">
+          <h3>Respect des normes sanitaires :</h3>
+          <p>Un restaurant propre assure la sécurité alimentaire et la satisfaction des clients en respectant les réglementations d’hygiène.</p>
+        </div>
+        <div className="argument">
+          <h3>Expérience client optimale :</h3>
+          <p>Un espace propre et bien entretenu renforce la confiance des clients et améliore leur expérience gastronomique.</p>
+        </div>
+      </div>
+      <h2>Nos services incluent :</h2>
+      <ul className="services-list">
+        <li>Nettoyage et désinfection des tables et chaises</li>
+        <li>Assainissement des cuisines et plans de travail</li>
+        <li>Nettoyage des sols et élimination des résidus alimentaires</li>
+        <li>Entretien des hottes et équipements de ventilation</li>
+        <li>Désinfection des sanitaires pour les clients</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+		  {/* Section nettoyage des cabinets médicaux */}
+<section className="medical-cleaning-services">
+  <div className="service-container">
+    <div className="service-image">
+      <img src={image8} alt="Nettoyage de cabinet médical" />
+    </div>
+    <div className="service-content">
+      <h2>Pourquoi choisir notre service de nettoyage pour cabinets médicaux ?</h2>
+      <div className="cleaning-arguments">
+        <div className="argument">
+          <h3>Prévention des infections :</h3>
+          <p>Un nettoyage rigoureux réduit les risques de contamination et protège la santé des patients et du personnel médical.</p>
+        </div>
+        <div className="argument">
+          <h3>Respect des protocoles d’hygiène :</h3>
+          <p>Nous utilisons des produits et techniques adaptés pour assurer un environnement médical stérile et sécurisé.</p>
+        </div>
+      </div>
+      <h2>Nos services incluent :</h2>
+      <ul className="services-list">
+        <li>Désinfection des surfaces de consultation (bureaux, fauteuils, équipements médicaux)</li>
+        <li>Stérilisation des instruments et appareils</li>
+        <li>Nettoyage et désinfection des sols et zones d’attente</li>
+        <li>Élimination sécurisée des déchets médicaux</li>
+        <li>Aération et assainissement de l’air</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 		  {/* Section vente de produits de nettoyage */}
 <section className="store-cleaning-services">
   <div className="service-container">
@@ -288,6 +356,11 @@ const csrftoken = Cookies.get('csrftoken');
     </div>
   </div>
 </section>
+
+		  <div>
+      <h1>Un sourire sincère est le reflet d’un cœur comblé de bonheur !</h1>
+      <Temoignages image={clientImage} />
+    </div>
 		  </div>
           } />
 
@@ -421,6 +494,10 @@ const csrftoken = Cookies.get('csrftoken');
         <Route path="/cleaning-industriel" element={<CleaningIndustriel image={imageC} />} />
         <Route path="/cleaning-hotelier" element={<CleaningHotelier image={imageD} />} />
         <Route path="/cleaning-magasin" element={<CleaningMagasin image={imageE} />} />
+	<Route path="/cleaning-restaurant" element={<CleaningRestaurant image={imageF} />} />
+        <Route path="/cleaning-cabinet" element={<CleaningCabinet image={imageG} />} />
+	<Route path="/temoignages" element={<Temoignages />} />
+
         </Routes>
 
 	  {/* Nouveau Footer avant l'existant */}

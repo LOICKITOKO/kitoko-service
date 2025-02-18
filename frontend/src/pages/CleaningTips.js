@@ -24,6 +24,12 @@ const CleaningTips = () => {
 	    <li>
               <Link to="/cleaning-magasin" className="cleaning-link">Conseils nettoyage magasin</Link>
 	    </li>
+	    <li>
+	      <Link to="/cleaning-restaurant" className="cleaning-link">Conseils nettoyage restaurant</Link>
+	    </li>
+	    <li>
+	      <Link to="/cleaning-cabinet" className="cleaning-link">Conseils nettoyage cabinets medicaux</Link>
+	    </li>
 	  </ul>
       </div>
     </div>

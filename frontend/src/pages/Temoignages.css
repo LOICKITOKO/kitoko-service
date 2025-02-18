@@ -1,0 +1,63 @@
+.temoignages-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 1000px;
+  background: linear-gradient(135deg, #f8f8f8, #eaeaea);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.temoignages-text {
+  flex: 1;
+  padding-right: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.temoignages-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.temoignages-description {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.temoignages-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.temoignages-image {
+  width: 400px; /* Augmentation de la largeur */
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.temoignages-image:hover {
+  transform: scale(1.1) rotate(1deg); /* Zoom un peu plus grand au survol */
+}
+
+/* Animation de fondu */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
