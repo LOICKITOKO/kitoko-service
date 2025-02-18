@@ -45,6 +45,9 @@ import imageG from './videos/imageG.png';
 import Temoignages from "./pages/Temoignages";
 import clientImage from "./videos/client1.png"; // Une image par défaut
 import accueilVideo from './videos/accueilVideo.mp4';
+import Net from "./pages/Net"; 
+import netImage from "./videos/net1.png"; // Image par défaut pour Net
+
 
 function App() {
   const [formData, setFormData] = useState({
@@ -367,6 +370,12 @@ const csrftoken = Cookies.get('csrftoken');
       <h1>Un sourire sincère est le reflet d’un cœur comblé de bonheur !</h1>
       <Temoignages image={clientImage} />
     </div>
+
+		  <div>
+  <h1>Ces instruments essentiels transforment un espace en un havre de propreté, révélant une brillance cachée !</h1>
+  <Net image={netImage} />
+</div>
+
 		  </div>
           } />
 
@@ -503,6 +512,7 @@ const csrftoken = Cookies.get('csrftoken');
 	<Route path="/cleaning-restaurant" element={<CleaningRestaurant image={imageF} />} />
         <Route path="/cleaning-cabinet" element={<CleaningCabinet image={imageG} />} />
 	<Route path="/temoignages" element={<Temoignages />} />
+        <Route path="/net" element={<Net />} />
 
         </Routes>
 

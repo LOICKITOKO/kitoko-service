@@ -15,29 +15,27 @@ const Temoignages = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setIndex((prevIndex) => (prevIndex + 1) % images.length); // Change l'image toutes les 3 secondes
     }, 3000); // Change toutes les 3 secondes
 
     return () => clearInterval(interval);
-  }, [index]);
+  }, []);
 
   return (
     <div className="temoignages-container">
       {/* Image avec effet de défilement et zoom */}
       <motion.div
         className="temoignages-image-container"
-        initial={{ scale: 0.9, opacity: 0.7 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.8, ease: "easeInOut" }}
+        style={{ position: "relative", width: "400px", height: "auto" }} // Garder la taille fixe pour le conteneur
       >
         <motion.img
           key={index}
           src={images[index]}
           alt="Témoignage client"
           className="temoignages-image"
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
+          initial={{ opacity: 0, x: 100 }} // Position initiale à droite
+          animate={{ opacity: 1, x: 0 }} // Déplace vers la gauche
+          exit={{ opacity: 0, x: -100 }} // Sortie vers la gauche
           transition={{ duration: 0.8, ease: "easeInOut" }}
         />
       </motion.div>

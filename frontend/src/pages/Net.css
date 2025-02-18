@@ -1,0 +1,49 @@
+.net-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrer le contenu horizontalement */
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 800px; /* Réduction de la largeur maximale */
+  background: linear-gradient(135deg, #f8f8f8, #eaeaea);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.net-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Garder le positionnement relatif pour les animations */
+  width: 800px; /* Réduction de la largeur du conteneur */
+  height: 350px; /* Ajustement de la hauteur selon vos besoins */
+}
+
+.net-image {
+  width: 100%; /* L'image prend toute la largeur du conteneur */
+  height: auto; /* Hauteur proportionnelle */
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.net-image:hover {
+  transform: scale(1.1) rotate(1deg); /* Zoom au survol */
+}
+
+h1 {
+  font-size: 26px;
+}
+
+/* Animation de fondu */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
