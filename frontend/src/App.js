@@ -103,7 +103,6 @@ const csrftoken = Cookies.get('csrftoken');
             <Link to="/" className="navbar-link">Accueil</Link>
             <Link to="/contact" className="navbar-link">Contact</Link>
             <Link to="/a-propos" className="navbar-link">À propos</Link>
-            <Link to="/nos-tarifs" className="navbar-link">Nos Tarifs</Link>
           </div>
         </nav>
 
@@ -463,23 +462,6 @@ const csrftoken = Cookies.get('csrftoken');
               <p>Avec des années d'expérience, nous proposons des solutions sur-mesure pour répondre à vos besoins spécifiques.</p>
               <p>Nous nous engageons à fournir un service de nettoyage fiable, efficace et respectueux de l'environnement pour garantir la satisfaction de nos clients.</p>
               <p>Notre équipe professionnelle utilise des équipements modernes et des produits de qualité pour assurer un nettoyage impeccable à chaque intervention.</p>
-            </div>
-          } />
-
-          {/* Page nos tarifs */}
-          <Route path="/nos-tarifs" element={
-            <div className="pricing-page">
-              <h1>Nos Tarifs</h1>
-              <div className="pricing">
-                <ul>
-                  <li>Nettoyage de bureaux : Mensuel / Sur devis , 25€ / Passage</li>
-                  <li>Entretien ménager : 50€ / visite</li>
-                  <li>Nettoyage industriel : Mensuel / Sur devis , 150€ / Intervention</li>
-                  <li>Nettoyage hôtelier : Sur devis</li>
-		  <li>Nettoyage magasin, super-marché : Sur devis</li>
-                </ul>
-                <p>Contactez-nous pour un devis personnalisé adapté à vos besoins !</p>
-              </div>
             </div>
           } />
 
