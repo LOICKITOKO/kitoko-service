@@ -34,11 +34,38 @@ body {
   z-index: 100;
 }
 
-.navbar-logo {
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-decoration: none;
+/* Conteneur principal de la vidéo */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  cursor: pointer;
+}
+
+/* Conteneur vidéo */
+.video-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Vidéo avec animation */
+.accueil-video {
+  width: 100%;           /* La vidéo prend toute la largeur de l'écran */
+  height: 400px;         /* Ajuste cette valeur selon la hauteur que tu veux */
+  object-fit: cover;     /* La vidéo conserve ses proportions tout en remplissant l'espace défini */
+  position: relative;    /* Permet à la vidéo d'être positionnée normalement */
+  top: 0;
+  left: 0;
+  margin-bottom: 20px;   /* Si tu veux un petit espace sous la vidéo avant le reste du contenu */
 }
 
 .navbar-links {

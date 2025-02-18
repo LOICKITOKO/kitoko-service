@@ -44,7 +44,7 @@ import imageF from './videos/imageF.png';
 import imageG from './videos/imageG.png';
 import Temoignages from "./pages/Temoignages";
 import clientImage from "./videos/client1.png"; // Une image par défaut
-
+import accueilVideo from './videos/accueilVideo.mp4';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -113,6 +113,12 @@ const csrftoken = Cookies.get('csrftoken');
                   <Link to="/demander-devis" className="cta-button">Demander un devis gratuit maintenant</Link>
                 </div>
               </header>
+
+  {/* Vidéo d'accueil */}
+      <video className="accueil-video" autoPlay loop muted>
+  <source src={accueilVideo} type="video/mp4" />
+  Votre navigateur ne supporte pas la lecture de cette vidéo.
+</video>
 
 		  <section className="cleaning-services">
 
