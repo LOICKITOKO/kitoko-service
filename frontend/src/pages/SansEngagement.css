@@ -1,85 +1,56 @@
-/* src/pages/SansEngagement.css */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  margin: 0;
-  padding: 0;
+/* PersonnelQualifie.css */
+.personnel-container {
+  display: flex;
+  flex-direction: column; /* Aligne le texte en colonne */
+  align-items: center; /* Centre le contenu */
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
+  animation: fadeIn 1s ease-in-out;
 }
-Conseils de nettoyage
-/* Titre principal */
-h1 {
-  text-align: center;
+
+/* Texte sans boîte autour */
+.personnel-text {
+  text-align: center; /* Centre le texte */
+  padding-bottom: 30px; /* Espace entre le texte et l'image */
+}
+
+.personnel-title {
+  font-size: 3rem; /* Augmenter la taille du titre */
+  font-weight: bold;
+  margin-bottom: 20px;
   color: #333;
-  font-size: 36px;
-  margin-top: 40px;
-  animation: fadeIn 2s ease-in-out;
-  margin: 80px;
+}
+
+.personnel-description {
+  font-size: 1.5rem; /* Augmenter la taille de la description */
+  line-height: 1.8; /* Espacement entre les lignes */
+  color: #555;
+}
+
+/* Conteneur pour les images alignées en bas */
+.personnel-image-container {
+  display: flex;
+  flex-direction: row; /* Aligne les images horizontalement */
+  justify-content: center; /* Centre les images horizontalement */
+  align-items: center; /* Centre les images verticalement */
+  margin-top: 30px; /* Espace au-dessus des images */
+}
+
+.personnel-image {
+  width: 100%;
+  max-width: 400px; /* Ajustez la taille maximale de l'image */
+  height: auto;
+  border-radius: 10px;
+  margin-right: 20px; /* Espace entre les deux images */
+}
+
+.personnel-image:last-child {
+  margin-right: 0; /* Pas d'espace à droite de la dernière image */
 }
 
 /* Animation d'apparition */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Contenu principal */
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  animation: fadeIn 2s ease-in-out forwards;
-}
-
-/* Texte des paragraphes */
-p {
-  color: black;
-  font-size: 20px;
-  line-height: 1.6;
-  text-align: center;
-  opacity: 0;
-  animation: fadeIn 2s ease-in-out forwards;
-  animation-delay: 0.5s;
-}
-
-/* Liste d'éléments */
-ul {
-  list-style-type: none;
-  padding: 0;
-  opacity: 0;
-  animation: fadeIn 2s ease-in-out forwards;
-  animation-delay: 1s;
-}
-
-/* Éléments de la liste */
-ul li {
-  font-size: 18px;
-  color: #333;
-  background-color: #fff;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 6px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-/* Survol d'un élément de liste */
-ul li:hover {
-  background-color: #f1c40f;
-  color: white;
-  transform: translateY(-5px);
-}
-
-/* Animation de fade-in pour afficher des informations */
-@keyframes fadeInUp {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -90,41 +61,19 @@ ul li:hover {
   }
 }
 
-/* Réponses visibles */
-ul li p {
-  font-size: 16px;
-  margin-top: 8px;
+/* 🟢 RESPONSIVE : Sur écran plus petit, on garde le texte et les images */
+@media (max-width: 900px) {
+  .personnel-image {
+    max-width: 90%; /* Pour éviter que l'image soit trop grande sur mobile */
+  }
 }
 
-/* Bouton d'action */
-button {
-  padding: 12px 24px;
-  background-color: #2ecc71;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-button:hover {
-  background-color: #27ae60;
-  transform: scale(1.1);
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 28px;
+@media (max-width: 600px) {
+  .personnel-container {
+    align-items: center; /* Centre le contenu sur petits écrans */
   }
 
-  ul li {
-    font-size: 16px;
-  }
-
-  button {
-    font-size: 14px;
-    padding: 10px 20px;
+  .personnel-image-container {
+    justify-content: center; /* Centre les images sur petits écrans */
   }
 }

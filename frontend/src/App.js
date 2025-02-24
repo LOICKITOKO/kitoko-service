@@ -47,7 +47,10 @@ import clientImage from "./videos/client1.png"; // Une image par défaut
 import accueilVideo from './videos/accueilVideo.mp4';
 import Net from "./pages/Net"; 
 import netImage from "./videos/net1.png"; // Image par défaut pour Net
-
+import eng1 from './videos/eng1.png';
+import eng2 from './videos/eng2.png';
+import perso1 from './videos/perso1.png';
+import perso2 from './videos/perso2.png';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -471,8 +474,6 @@ const csrftoken = Cookies.get('csrftoken');
 	  <Route path="/informations-generales" element={<GeneralInfo />} />
 	  <Route path="/avis-et-evaluations" element={<AvisEtEvaluations />} />
 	  <Route path="/faq" element={<FAQ />} />
-	  <Route path="/personnel-qualifie" element={<PersonnelQualifie />} />
-          <Route path="/sans-engagement" element={<SansEngagement />} />
           <Route path="/demande-employe" element={<DemandeEmploye />} />
 	  <Route path="/offres-venir" element={<OffresVenir />} />
 	  <Route path="/Testimonials" element={<Testimonials />} />
@@ -495,7 +496,8 @@ const csrftoken = Cookies.get('csrftoken');
         <Route path="/cleaning-cabinet" element={<CleaningCabinet image={imageG} />} />
 	<Route path="/temoignages" element={<Temoignages />} />
         <Route path="/net" element={<Net />} />
-
+	<Route path="/sans-engagement" element={<SansEngagement image1={eng1} image2={eng2} />} />
+        <Route path="/personnel-qualifie" element={<PersonnelQualifie image1={perso1} image2={perso2} />} />
         </Routes>
 
 	  {/* Nouveau Footer avant l'existant */}

@@ -3,32 +3,26 @@
 import React from 'react';
 import './SansEngagement.css';
 
-function SansEngagement() {
+const SansEngagement = ({ image1, image2 }) => {
   return (
-    <div>
+    <div className="sans-engagement-container">
       <h1>Travailler sans Engagement</h1>
       <p>
-        Chez KITOKO-SERVICE, nous comprenons que chaque client a des besoins différents, c'est pourquoi nous
-        offrons des services sans engagement. Cela signifie que vous pouvez profiter de nos prestations de
-        nettoyage de manière flexible, sans obligation à long terme. Nous croyons en la transparence totale
-        avec nos clients.
+        Chez KITOKO-SERVICE, nous savons que chaque client a des besoins différents. Nous offrons des services sans engagement.
       </p>
       <p>
-        Vous pouvez tester nos services sans avoir à vous engager sur une période prolongée. Nous vous offrons
-        une estimation claire et honnête avant toute intervention, et vous avez la liberté de décider à tout
-        moment si vous souhaitez poursuivre ou modifier notre collaboration.
+        Testez nos services sans engagement prolongé. Vous pouvez décider à tout moment de poursuivre ou de modifier notre collaboration.
       </p>
       <p>
-        Cette approche sans engagement vous permet d’évaluer la qualité de notre travail et de vous assurer que
-        nous répondons à vos attentes. Notre objectif est de bâtir une relation de confiance basée sur la
-        transparence et la satisfaction, sans pression ni contraintes.
+        Nous voulons établir une relation de confiance basée sur la transparence et la satisfaction, sans pression.
       </p>
-      <p>
-        Nous vous garantissons également une flexibilité totale en ce qui concerne les horaires et les
-        services demandés, pour que nous puissions toujours nous adapter à vos besoins en constante évolution.
-      </p>
+
+      <div className="sans-engagement-image-container">
+        <img src={image1} alt="Travailler sans engagement" className="sans-engagement-image" />
+        <img src={image2} alt="Deuxième image" className="sans-engagement-image" />
+      </div>
     </div>
   );
-}
+};
 
 export default SansEngagement;
