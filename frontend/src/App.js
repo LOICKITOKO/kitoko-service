@@ -44,13 +44,14 @@ import imageF from './videos/imageF.png';
 import imageG from './videos/imageG.png';
 import Temoignages from "./pages/Temoignages";
 import clientImage from "./videos/client1.png"; // Une image par défaut
-import accueilVideo from './videos/accueilVideo.mp4';
+import ImageSlider from './pages/ImageSlider';
 import Net from "./pages/Net"; 
 import netImage from "./videos/net1.png"; // Image par défaut pour Net
 import eng1 from './videos/eng1.png';
 import eng2 from './videos/eng2.png';
 import perso1 from './videos/perso1.png';
 import perso2 from './videos/perso2.png';
+import About from './pages/About';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -105,7 +106,7 @@ const csrftoken = Cookies.get('csrftoken');
           <div className="navbar-links">
             <Link to="/" className="navbar-link">Accueil</Link>
             <Link to="/contact" className="navbar-link">Contact</Link>
-            <Link to="/a-propos" className="navbar-link">À propos</Link>
+	    <Link to="/a-propos" className="navbar-link">À propos</Link>
           </div>
         </nav>
 
@@ -119,11 +120,9 @@ const csrftoken = Cookies.get('csrftoken');
                 </div>
               </header>
 
-  {/* Vidéo d'accueil */}
-      <video className="accueil-video" autoPlay loop muted>
-  <source src={accueilVideo} type="video/mp4" />
-  Votre navigateur ne supporte pas la lecture de cette vidéo.
-</video>
+		   <div className="App">
+      <ImageSlider /> {/* Utilisation du composant ImageSlider */}
+    </div>
 
 		  <section className="cleaning-services">
 
@@ -453,18 +452,8 @@ const csrftoken = Cookies.get('csrftoken');
             <div className="contact-page">
               <h1>Contactez-nous</h1>
               <p>Nous sommes à votre disposition pour toute question ou demande.</p>
-              <p>Email: kitokoservice@gmail.com</p>
+              <p>Email: kitokoservice05@gmail.com</p>
               <p>Téléphone: 06 04 12 36 61</p>
-            </div>
-          } />
-
-          <Route path="/a-propos" element={
-            <div className="about-page">
-              <h1>À propos de KITOKO-SERVICE</h1>
-              <p>Nous sommes une entreprise spécialisée dans le nettoyage et l'entretien de locaux professionnels et résidentiels.</p>
-              <p>Avec des années d'expérience, nous proposons des solutions sur-mesure pour répondre à vos besoins spécifiques.</p>
-              <p>Nous nous engageons à fournir un service de nettoyage fiable, efficace et respectueux de l'environnement pour garantir la satisfaction de nos clients.</p>
-              <p>Notre équipe professionnelle utilise des équipements modernes et des produits de qualité pour assurer un nettoyage impeccable à chaque intervention.</p>
             </div>
           } />
 
@@ -474,6 +463,7 @@ const csrftoken = Cookies.get('csrftoken');
 	  <Route path="/informations-generales" element={<GeneralInfo />} />
 	  <Route path="/avis-et-evaluations" element={<AvisEtEvaluations />} />
 	  <Route path="/faq" element={<FAQ />} />
+	  <Route path="/a-propos" element={<About />} /> {/* Page À propos */}
           <Route path="/demande-employe" element={<DemandeEmploye />} />
 	  <Route path="/offres-venir" element={<OffresVenir />} />
 	  <Route path="/Testimonials" element={<Testimonials />} />
@@ -498,6 +488,7 @@ const csrftoken = Cookies.get('csrftoken');
         <Route path="/net" element={<Net />} />
 	<Route path="/sans-engagement" element={<SansEngagement image1={eng1} image2={eng2} />} />
         <Route path="/personnel-qualifie" element={<PersonnelQualifie image1={perso1} image2={perso2} />} />
+	<Route path="/image-slider" element={<ImageSlider />} />
         </Routes>
 
 	  {/* Nouveau Footer avant l'existant */}

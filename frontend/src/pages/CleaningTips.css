@@ -1,150 +1,43 @@
-/* Animation d'apparition du titre principal */
-.cleaning-tips-page h1 {
-  text-align: center;
-  color: #333;
-  font-size: 36px;
-  margin-bottom: 30px;
-  animation: fadeIn 2s ease-in-out;
-  margin: 90px;
+.cleaning-tips-page {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Animation d'apparition */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Section des catégories de conseils de nettoyage */
-.cleaning-category {
-  background-color: #fff;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-/* Survol d'une catégorie */
-.cleaning-category:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Titre des catégories de nettoyage */
-.cleaning-category h2 {
-  font-size: 24px;
-  color: #333;
-  margin: 20px;
-  font-weight: bold;
-  position: relative;
-  transition: color 0.3s ease-in-out;
-}
-
-/* Animation de la ligne sous le titre */
-.cleaning-category h2::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50px;
-  height: 2px;
-  background-color: #007BFF;
-  transition: width 0.3s ease-in-out;
-}
-
-.cleaning-category:hover h2::after {
-  width: 100%;
-}
-
-/* Liste des conseils de nettoyage */
-ul {
-  list-style: none;
-  padding-left: 20px;
-}
-
-/* Élément de liste */
-ul li {
-  margin: 10px 0;
-  font-size: 16px;
-  line-height: 1.6;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-/* Animation pour l'apparition des éléments de liste */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Affichage de la réponse de liste */
-ul li.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Survol des éléments de liste */
-ul li:hover {
-  color: #007BFF; /* Changement de couleur */
-  cursor: pointer;
-  transform: translateY(-5px); /* Soulèvement lors du survol */
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .cleaning-tips-page h1 {
+h1 {
     font-size: 28px;
-  }
-
-  .cleaning-category h2 {
-    font-size: 20px;
-  }
-
-  ul li {
-    font-size: 14px;
-  }
+    margin-bottom: 20px;
+    color: #333;
 }
 
-/* Animation des catégories pour rendre la page vivante */
-.cleaning-category {
-  animation: lightPlay 3.5s infinite;
+/* Grille dynamique des conseils */
+.cleaning-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-@keyframes lightPlay {
-  0%, 100% {
-    background-color: transparent;
-  }
-  50% {
-    background-color: rgba(0, 123, 255, 0.1); /* Bleu doux */
-  }
+/* Style des cartes */
+.cleaning-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: linear-gradient(135deg, #007BFF, #00C6FF);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Ombre légère pour l'effet de lumière sur la catégorie */
-.cleaning-category:hover {
-  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.2); /* Ombre bleue sur survol */
-}
-
-/* Jeux de lumière pour chaque catégorie */
-.cleaning-category {
-  animation: lightPulse 4s ease-in-out infinite;
-}
-
-@keyframes lightPulse {
-  0%, 100% {
-    background-color: transparent;
-  }
-  50% {
-    background-color: rgba(0, 123, 255, 0.05); /* Effet bleu léger */
-  }
+/* Effet au survol */
+.cleaning-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #0056b3, #0088cc);
 }

@@ -1,0 +1,135 @@
+/* Suppression du fond global */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur principal */
+.about-page {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Introduction : Description + Images */
+.about-intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.about-description {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-description h1 {
+    color: #333;
+}
+
+.about-description p {
+    color: #666;
+}
+
+/* Descendre les 3 images pour éviter qu'elles touchent le texte */
+.about-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 320px;
+    margin-top: 40px;
+}
+
+.about-image {
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Effet zoom au survol */
+.about-image:hover,
+.responsable img:hover,
+.value-block img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-left {
+    width: 350px;
+    left: -140px;
+    transform: rotate(-8deg);
+}
+
+.image-center {
+    z-index: 2;
+    transform: scale(1.2);
+}
+
+.image-right {
+    width: 350px;
+    right: -140px;
+    transform: rotate(8deg);
+}
+
+/* Section Équipe : Remettre les images des responsables sur la même ligne */
+.responsable-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.responsable {
+    text-align: center;
+}
+
+.responsable img {
+    width: 150px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out; /* Animation fluide */
+}
+
+/* Section des valeurs */
+.about-values {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.value-blocks {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Augmenter la taille des images des valeurs */
+.value-block img {
+    max-width: 200px;
+    transition: transform 0.3s ease-in-out; /* Animation fluide */
+}
+
+/* Section des horaires avec un fond bleu */
+.about-hours {
+    background-color: #0066cc; /* Couleur de fond bleue */
+    color: white; /* Texte en blanc */
+    padding: 20px; /* Espacement interne */
+    border-radius: 10px; /* Coins arrondis */
+    text-align: center; /* Centrer le texte */
+    margin-top: 40px; /* Espacement au-dessus */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Ombre pour un effet de profondeur */
+}
+
+.about-hours h2 {
+    margin-bottom: 10px; /* Espacement entre le titre et le texte */
+    font-size: 24px; /* Taille de police pour le titre */
+}
+
+.about-hours p {
+    margin: 5px 0; /* Espacement vertical entre les horaires */
+    font-size: 18px; /* Taille de police pour le texte */
+}
