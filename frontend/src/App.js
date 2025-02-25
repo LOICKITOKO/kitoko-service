@@ -52,6 +52,7 @@ import eng2 from './videos/eng2.png';
 import perso1 from './videos/perso1.png';
 import perso2 from './videos/perso2.png';
 import About from './pages/About';
+import Contact from "./pages/Contact"; // Vérifie bien le chemin !
 
 function App() {
   const [formData, setFormData] = useState({
@@ -448,15 +449,6 @@ const csrftoken = Cookies.get('csrftoken');
             </div>
           } />
 
-          <Route path="/contact" element={
-            <div className="contact-page">
-              <h1>Contactez-nous</h1>
-              <p>Nous sommes à votre disposition pour toute question ou demande.</p>
-              <p>Email: kitokoservice05@gmail.com</p>
-              <p>Téléphone: 06 04 12 36 61</p>
-            </div>
-          } />
-
 	  {/* Page Conseils de nettoyage */}
           <Route path="/conseils-de-nettoyage" element={<CleaningTips />} />
 	  <Route path="/" element={<CleaningTips />} />
@@ -489,6 +481,7 @@ const csrftoken = Cookies.get('csrftoken');
 	<Route path="/sans-engagement" element={<SansEngagement image1={eng1} image2={eng2} />} />
         <Route path="/personnel-qualifie" element={<PersonnelQualifie image1={perso1} image2={perso2} />} />
 	<Route path="/image-slider" element={<ImageSlider />} />
+	<Route path="/contact" element={<Contact />} /> {/* Page contact */}
         </Routes>
 
 	  {/* Nouveau Footer avant l'existant */}
